@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: omega_project
+  pool: 5
+  username: omega
+  password: X3eUJSoT
+
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: omega_project
+  pool: 5
+  username: omega
+  password: X3eUJSoT

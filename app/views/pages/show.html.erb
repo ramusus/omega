@@ -1,0 +1,84 @@
+<% content_for :title do %><%= @page.title %><% end %>
+
+<% content_for :extra_head do %>
+    <script type="text/javascript">
+      $(function() {
+        $('ul.b-main-menu li#menu_<%= @page.slug %> a.link').addClass('selected');
+      });
+    </script>
+<% end %>
+
+<% content_for :content do %>
+    <div class="l-content">
+        <div class="b-intro">
+            <h1 class="b-logo">
+                <a class="link" href="/"><b class="logo"></b> Омега Консалтинг</a>
+            </h1>
+            <ul class="b-main-menu">
+                <li id="menu_testing" class="item">
+                    <a class="link" href="/testing/">Тестирование</a>
+                </li>
+                <li id="menu_devices" class="item">
+                    <a class="link" href="/devices/">Устройства</a>
+                </li>
+                <li id="menu_education" class="item teach">
+                    <a class="link" href="/education/">Обучение</a>
+                </li>
+                <li id="menu_company" class="item">
+                    <a class="link" href="/company/">Компания</a>
+                </li>
+            </ul>
+            <% if @page.top_left %>
+                <%= @page.top.html_safe %>
+            <% end %>
+            <% if @page.top_left %>
+                <div class="l-wrapper">
+                    <div class="l-column-540">
+                        <%= @page.top_left.html_safe %>
+                    </div>
+                    <% if @page.top_right %>
+                        <div class="l-column-140">
+                            <%= @page.top_right.html_safe %>
+                        </div>
+                    <% end %>
+                </div>
+            <% end %>
+        </div>
+
+        <%= @page.content.html_safe %>
+
+        <div class="b-outro">
+            <h2 class="b-less-title b-first-title">Пресса о нас</h2>
+            <ul class="b-press">
+                <li class="item">
+                    <a class="link" href="press.html">
+                        <img class="image" src="/media/img/tmp/press-1.jpg" alt=""/>
+                        <div class="date">Июль&nbsp;2011</div>
+                        <h3 class="title">Тестируем участников телепроекта <span class="b-nobr">ДОМ-2</span></h3>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="press.html">
+                        <img class="image" src="/media/img/tmp/press-2.jpg" alt=""/>
+                        <div class="date">Сентябрь&nbsp;2011</div>
+                        <h3 class="title">Продолжение диалога об&nbsp;аспектах применения полиграфа</h3>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="press.html">
+                        <img class="image" src="/media/img/tmp/press-3.jpg" alt=""/>
+                        <div class="date">Май&nbsp;2010</div>
+                        <h3 class="title">Обсуждение &laquo;философии лжи&raquo; с&nbsp;Севой Новгородцевым</h3>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="press.html">
+                        <img class="image" src="/media/img/tmp/press-4.jpg" alt=""/>
+                        <div class="date">Сентябрь&nbsp;2010</div>
+                        <h3 class="title">Диалог об&nbsp;аспектах применения полиграфа</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<% end %>
