@@ -1,0 +1,9 @@
+ru:
+  time:
+    formats:
+      default: "%e %B %H:%M"
+  activerecord:
+    models:
+      question: "Вопрос"
+      answer: "Ответ"
+      user: "Пользователь"

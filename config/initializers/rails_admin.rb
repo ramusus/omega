@@ -8,13 +8,13 @@ RailsAdmin.config do |config|
   # I18n.default_locale = :de
 
   config.current_user_method { current_user } # auto-generated
-  
+
   # If you want to track changes on your models:
   # config.audit_with :history, User
-  
+
   # Or with a PaperTrail: (you need to install it first)
   # config.audit_with :paper_trail, User
-  
+
   # Set the admin name here (optional second array element will appear in a beautiful RailsAdmin red ©)
   config.main_app_name = ['Project', 'Admin']
   # or for a dynamic name:
@@ -79,15 +79,23 @@ RailsAdmin.config do |config|
 
   # All fields marked as 'hidden' won't be shown anywhere in the rails_admin unless you mark them as visible. (visible(true))
 
-  # config.model Page do
-  #   # Found associations:
-  #   # Found columns:
-  #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
+  config.model Page do
+    list do
+      include_fields :title, :slug
+    end
+    show do
+      include_fields :title, :slug
+      include_fields :top, :top_left, :top_right, :content do
+        pretty_value do
+          value.html_safe
+         end
+      end
+    end
+    edit do
+      include_fields :title, :slug
+      include_fields :top, :top_left, :top_right, :content do
+        ckeditor true
+      end
+    end
+  end
 end
