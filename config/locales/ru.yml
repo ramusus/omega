@@ -4,6 +4,14 @@ ru:
       default: "%e %B %H:%M"
   activerecord:
     models:
-      question: "Вопрос"
+      page: "Страница"
       answer: "Ответ"
       user: "Пользователь"
+    attributes:
+      page:
+        title: "Заголовок"
+        slug: "Адрес"
+        top: "Верхний блок"
+        top_left: "Верхний левый блок"
+        top_right: "Верхний правый блок"
+        content: "Основной блок"
