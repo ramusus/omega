@@ -1,0 +1,81 @@
+﻿/* hasLayout */
+.l-header,
+* HTML .l-equal-columns,
+.l-wrapper,
+.b-map,
+* HTML .b-intro,
+.b-main-menu,
+* HTML .b-gallery,
+* HTML .b-press,
+* HTML .b-tabs .item,
+* HTML .b-good,
+* HTML .b-good .desc,
+* HTML .b-inset,
+.b-field {
+	zoom: 1;
+	}
+
+/* Elements */
+UL {
+	margin-left: 0;
+	}
+	UL LI {
+		padding-left: 26px;
+		background: url('../img/list-item.gif') no-repeat 2px .7em;
+		}
+
+/* Layout */
+* HTML .l-modal {
+	position: absolute;
+	}
+
+/* Header and footer blocks */
+.b-contacts .b-icon-mail {
+	margin-top: -4px;
+	}
+* HTML .b-bookmark {
+	position: absolute;
+	}
+
+/* Content blocks */
+* HTML .b-logo .link:visited {
+	color: #FFF;
+	}
+* HTML .b-logo .link:hover {
+	color: #F8BF0C;
+	}
+* HTML .b-main-menu .item {
+	display: inline;
+	}
+* HTML .b-gallery .frame {
+	background: none;
+	}
+	.b-gallery .inner {
+		position: relative;
+		}
+* HTML .b-press .item {
+	display: inline;
+	}
+
+/* Form elements */
+.b-wide-input {
+	margin-right: 20px;
+	zoom: 1;
+	}
+	.b-wide-input INPUT,
+	.b-wide-input TEXTAREA,
+	.b-wide-input SELECT {
+		float: left;
+		}
+.b-button {
+	display: inline;
+	}
+	.b-button .inner {
+		float: left;
+		}
+
+/* Forms */
+* HTML .b-form {
+	width: 360px;
+	overflow: hidden;
+	}

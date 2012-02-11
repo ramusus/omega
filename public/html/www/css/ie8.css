@@ -1,0 +1,10 @@
+﻿/* Header and footer blocks */
+.b-contacts .b-icon-mail {
+	margin-top: -5px;
+	}
+
+/* Content blocks */
+.b-intro-gallery .overlay {
+	background: #FFF;
+	filter: alpha(opacity = 10);
+	}
