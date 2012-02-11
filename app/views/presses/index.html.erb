@@ -1,0 +1,25 @@
+<% content_for :title do %>Пресса о нас<% end %>
+
+<% content_for :top do %>
+    <div class="l-wrapper">
+        <div class="l-column-540">
+            <div class="h-column-60 b-section-intro">
+                <p>Наши специалисты заслуженно считаются лучшими в&nbsp;своей области. Мы&nbsp;способны помочь, когда необходимы разъяснения принципов действия и&nbsp;возможностей детекторов лжи, а&nbsp;также проведение нестандартных видов исследований.</p>
+                <p class="b-last-textblock">Раздел &laquo;Пресса о&nbsp;нас&raquo; показывает некоторые рабочие моменты наших специалистов.</p>
+            </div>
+        </div>
+    </div>
+<% end %>
+
+<% content_for :body do %>
+    <h2 class="b-section-title">Пресса о&nbsp;нас</h2>
+    <div id="tabs" class="l-column-wrapper l-equal-columns">
+        <div class="h-column-40 h-shift-35 b-less-text">
+            <div id="tab-1channel" class="js-tab">
+                <%= render "layouts/press" %>
+            </div>
+        </div>
+    </div>
+<% end %>
+
+<%= render :template => 'layouts/layout' %>

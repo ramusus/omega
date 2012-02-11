@@ -98,4 +98,26 @@ RailsAdmin.config do |config|
       end
     end
   end
+
+  config.model Press do
+    list do
+      include_fields :title, :date
+    end
+    edit do
+      include_fields :title, :link, :date, :image
+      field :image, :paperclip do
+        # set a method available to your asset (defaults to :thumb, :thumbnail or '100x100>' for Dragonfly)
+        thumb_method :medium
+        # for delete checkbox in forms
+        delete_method :image_delete     # don't forget to whitelist if you use :attr_accessible
+      end
+    end
+  end
+
+  config.model Query do
+    list do
+      include_fields :topic, :name, :phone, :email
+    end
+  end
+
 end

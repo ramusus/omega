@@ -1,11 +1,16 @@
 Project::Application.routes.draw do
+
+  resources :queries
+
   mount Ckeditor::Engine => '/ckeditor'
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
 
+  #resources :presses
   #resources :pages
+  match "/press/" => "presses#index"
   match "/:slug/" => "pages#show"
   root :to => "pages#show"
 

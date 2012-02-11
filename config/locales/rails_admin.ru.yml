@@ -61,7 +61,7 @@ ru:
         link: "Добавить новый %{model_label}"
         done: "создано"
       edit:
-        title: "Редактировение %{model_label} '%{object_label}'"
+        title: "Редактирование %{model_label} '%{object_label}'"
         menu: "Редактирование"
         breadcrumb: "редактирование"
         link: "Редактировать %{model_label}"

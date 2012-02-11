@@ -1,0 +1,26 @@
+<% content_for :content do %>
+    <div class="l-content">
+        <div class="b-intro">
+            <h1 class="b-logo">
+                <a class="link" href="/"><b class="logo"></b> Омега Консалтинг</a>
+            </h1>
+            <ul class="b-main-menu">
+                <li id="menu_testing" class="item">
+                    <a class="link" href="/testing/">Тестирование</a>
+                </li>
+                <li id="menu_devices" class="item">
+                    <a class="link" href="/devices/">Устройства</a>
+                </li>
+                <li id="menu_education" class="item teach">
+                    <a class="link" href="/education/">Обучение</a>
+                </li>
+                <li id="menu_company" class="item">
+                    <a class="link" href="/company/">Компания</a>
+                </li>
+            </ul>
+            <%= yield :top %>
+        </div>
+        <%= content_for?(:body) ? yield(:body) : yield %>
+        <%= yield :press %>
+    </div>
+<% end %>

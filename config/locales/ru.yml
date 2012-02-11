@@ -7,6 +7,8 @@ ru:
       page: "Страница"
       answer: "Ответ"
       user: "Пользователь"
+      query: "Запрос"
+      press: "Пресса"
     attributes:
       page:
         title: "Заголовок"
@@ -15,3 +17,15 @@ ru:
         top_left: "Верхний левый блок"
         top_right: "Верхний правый блок"
         content: "Основной блок"
+      press:
+        title: "Заголовок"
+        date: "Дата"
+        link: "Ссылка"
+        image: "Картинка"
+      query:
+        topic: "Тема"
+        description: "Описание задачи и вопросы"
+        name: "Имя"
+        phone: "Телефон"
+        time: "Удобное время для звонка"
+        email: "Email"
