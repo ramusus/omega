@@ -13,9 +13,10 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: omega_project
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: omegaconsulting_development
   pool: 5
-  username: omega
-  password: X3eUJSoT
+  username: omegaconsulting
+  password: w47o8qgfiwe7wrgv3qfu723gr

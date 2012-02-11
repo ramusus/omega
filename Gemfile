@@ -16,7 +16,13 @@ gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'jquery-rails'
 
 gem 'sqlite3'
-gem 'pg'
+
+group :development do
+  gem 'pg'
+end
+group :production do
+    gem 'mysql2'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
