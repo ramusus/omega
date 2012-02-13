@@ -11,6 +11,12 @@ GIT
     auto_migrations (1.0.20080704)
 
 GIT
+  remote: git://github.com/lostapathy/yaml_db.git
+  revision: 98e9a5dca43e3fedd3268c76a73af40d1bdf1dfd
+  specs:
+    yaml_db (0.2.2)
+
+GIT
   remote: git://github.com/sferik/rails_admin.git
   revision: dac2e551c5126226ae8823118059a14f4d4b6cb7
   specs:
@@ -216,3 +222,4 @@ DEPENDENCIES
   therubyracer
   uglifier (>= 1.0.3)
   validates_email_format_of!
+  yaml_db!

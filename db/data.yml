@@ -1,0 +1,450 @@
+
+---
+pages:
+  columns:
+  - id
+  - title
+  - top
+  - top_left
+  - top_right
+  - content
+  - slug
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - Устройства
+    - ''
+    - ! "\t\t\t\t\t<div class=\"h-column-60 b-section-intro\">\r\n\t\t\t\t\t\t\t<p>Наша
+      компания занимается продажей и&nbsp;ремонтом полиграфов производства Лаборатории
+      Варламова.</p>\r\n\t\t\t\t\t\t\t<p>Создатель серии полиграфов &laquo;Барьер&raquo;,
+      &laquo;Крис&raquo;, &laquo;Риф&raquo; &mdash; Варламов Валерий Алексеевич является
+      единственным специалистом в&nbsp;России, имеющим <span class=\"b-nobr\">40-летний</span>
+      стаж работы на&nbsp;полиграфе.</p>\r\n\t\t\t\t\t\t\t<p class=\"b-last-textblock\">Разные
+      модификации полиграфов позволяют проводить тестирования с&nbsp;нужной степенью
+      точности, отличаются набором датчиков и&nbsp;аппаратной частью устройства.</p>\r\n\t\t\t\t\t\t</div>"
+    - ! "\t\t\t\t\t\t<dl class=\"b-person\">\r\n\t\t\t\t\t\t\t<dt class=\"title\">\r\n\t\t\t\t\t\t\t\t<a
+      class=\"link\" href=\"?\">\r\n\t\t\t\t\t\t\t\t\t<img class=\"image\" src=\"/media/img/tmp/person-1.jpg\"
+      alt=\"\"/>\r\n\t\t\t\t\t\t\t\t\tВарламов Валерий&nbsp;Алексеевич\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</dt>\r\n\t\t\t\t\t\t\t<dd
+      class=\"desc\">Доктор биологических наук, академик, создатель серии полиграфов</dd>\r\n\t\t\t\t\t\t</dl>"
+    - ! "\t\t\t<h2 class=\"b-section-title\">Типы используемых полиграфов</h2>\r\n\t\t\t<div
+      id=\"tabs\" class=\"l-column-wrapper l-equal-columns\">\r\n\t\t\t\t<div class=\"l-column-200
+      l-equal-column\">\r\n\t\t\t\t\t<div class=\"h-column-20 h-shift-28\">\r\n\t\t\t\t\t\t<ul
+      class=\"b-tabs b-tabs-compact\">\r\n\t\t\t\t\t\t\t<li class=\"item\">\r\n\t\t\t\t\t\t\t\t<a
+      class=\"link\" href=\"#tab-device-1\">\r\n\t\t\t\t\t\t\t\t\t<strong>Барьер&nbsp;14</strong>\r\n\t\t\t\t\t\t\t\t\t<b
+      class=\"b-icon b-icon-current\"><b></b></b>\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t\t<li
+      class=\"item\">\r\n\t\t\t\t\t\t\t\t<a class=\"link\" href=\"#tab-device-2\">\r\n\t\t\t\t\t\t\t\t\t<strong>Крис</strong>\r\n\t\t\t\t\t\t\t\t\t<b
+      class=\"b-icon b-icon-current\"><b></b></b>\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t\t<li
+      class=\"item\">\r\n\t\t\t\t\t\t\t\t<a class=\"link\" href=\"#tab-device-3\">\r\n\t\t\t\t\t\t\t\t\t<strong>Риф</strong>\r\n\t\t\t\t\t\t\t\t\t<b
+      class=\"b-icon b-icon-current\"><b></b></b>\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t\t<li
+      class=\"item\">\r\n\t\t\t\t\t\t\t\t<a class=\"link highlighted\" href=\"#tab-device-4\">\r\n\t\t\t\t\t\t\t\t\t<strong>Б/у
+      устройства</strong>\r\n\t\t\t\t\t\t\t\t\t<b class=\"b-icon b-icon-current\"><b></b></b>\r\n\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t<dl
+      class=\"b-more-contacts\">\r\n\t\t\t\t\t\t\t<dt class=\"title\">Вопросы и заявки:</dt>\r\n\t\t\t\t\t\t\t<dd
+      class=\"desc\">\r\n\t\t\t\t\t\t\t\t<strong class=\"b-nobr\">+7 (495) 506-20-16</strong><br/>\r\n\t\t\t\t\t\t\t\t<a
+      class=\"link\" href=\"mailto:info@omegaconsulting.ru\">info@omegaconsulting.ru</a>\r\n\t\t\t\t\t\t\t</dd>\r\n\t\t\t\t\t\t</dl>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+      class=\"l-column-625 l-equal-column\">\r\n\t\t\t\t\t<div class=\"h-column-60
+      h-shift-40 b-less-text\">\r\n\t\t\t\t\t\t<div id=\"tab-device-1\" class=\"js-tab\">\r\n\t\t\t\t\t\t\t<div
+      class=\"b-good\">\r\n\t\t\t\t\t\t\t\t<div class=\"photos\">\r\n\t\t\t\t\t\t\t\t\t<a
+      class=\"link\" href=\"?\">\r\n\t\t\t\t\t\t\t\t\t\t<img class=\"image\" src=\"/media/img/tmp/good-1.jpg\"
+      alt=\"\"/>\r\n\t\t\t\t\t\t\t\t\t\t6 фото\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+      class=\"desc\">\r\n\t\t\t\t\t\t\t\t\t<h3 class=\"title\">Полиграф (детектор
+      лжи) «Риф»</h3>\r\n\t\t\t\t\t\t\t\t\t<dl class=\"options\">\r\n\t\t\t\t\t\t\t\t\t\t<dt
+      class=\"label\">Цена:</dt>\r\n\t\t\t\t\t\t\t\t\t\t<dd class=\"value price\">255&nbsp;000&nbsp;руб.</dd>\r\n\t\t\t\t\t\t\t\t\t\t<dt
+      class=\"label\">Год разработки:</dt>\r\n\t\t\t\t\t\t\t\t\t\t<dd class=\"value\">2008</dd>\r\n\t\t\t\t\t\t\t\t\t\t<dt
+      class=\"label\">Последнее обновление ПО:</dt>\r\n\t\t\t\t\t\t\t\t\t\t<dd class=\"value\">май&nbsp;2010</dd>\r\n\t\t\t\t\t\t\t\t\t</dl>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<p>Детектор
+      лжи &laquo;Риф&raquo; является лучшей моделью серии. От&nbsp;полиграфа &laquo;Крис&raquo;
+      отличается более высоким качеством снятия и&nbsp;преобразования сигнала. В&nbsp;нем
+      использованы сверхпрецизионные микросхемы, позволяющие максимально повысить
+      точность сигналов и&nbsp;получить наиболее подробные кривые. Обеспечивает приём
+      сигналов от&nbsp;датчиков по&nbsp;восьми каналам:</p>\r\n\t\t\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t\t\t<li>Верхнее
+      (грудное) дыхание</li>\r\n\t\t\t\t\t\t\t\t<li>Нижнее (брюшное) дыхание</li>\r\n\t\t\t\t\t\t\t\t<li>Кожно-гальваническая
+      реакция (биоэлектрическая активность на&nbsp;коже)</li>\r\n\t\t\t\t\t\t\t\t<li>Тремор
+      (регистрация непроизвольных движений)</li>\r\n\t\t\t\t\t\t\t\t<li>Фотоплетизмограмма
+      (сигнал, определяемый пульсовыми изменениями объема крови в&nbsp;тканях)</li>\r\n\t\t\t\t\t\t\t\t<li>Артериальное
+      давление</li>\r\n\t\t\t\t\t\t\t\t<li>Речевой сигнал</li>\r\n\t\t\t\t\t\t\t\t<li>&laquo;Косынка&raquo;
+      (оценка общего эмоционального напряжения обследуемого)</li>\r\n\t\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t\t<p>Комплект
+      поставки детектора лжи (полиграфа) &laquo;Риф&raquo;:</p>\r\n\t\t\t\t\t\t\t<div
+      class=\"l-wrapper l-wrapper-42\">\r\n\t\t\t\t\t\t\t\t<div class=\"l-column-250\">\r\n\t\t\t\t\t\t\t\t\t<div
+      class=\"h-column-40\">\r\n\t\t\t\t\t\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t\t\t\t\t\t<li>Полиграф
+      &laquo;Риф&raquo;</li>\r\n\t\t\t\t\t\t\t\t\t\t\t<li>Датчик дыхания (2&nbsp;шт.)</li>\r\n\t\t\t\t\t\t\t\t\t\t\t<li>Датчик
+      КГР</li>\r\n\t\t\t\t\t\t\t\t\t\t\t<li>Датчик тремора</li>\r\n\t\t\t\t\t\t\t\t\t\t\t<li>Датчик
+      ФПГ</li>\r\n\t\t\t\t\t\t\t\t\t\t\t<li>Датчик АД</li>\r\n\t\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+      class=\"l-column-250\">\r\n\t\t\t\t\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t\t\t\t\t<li>Микрофон</li>\r\n\t\t\t\t\t\t\t\t\t\t<li>Соединительный
+      кабель USB</li>\r\n\t\t\t\t\t\t\t\t\t\t<li>Диск с&nbsp;ПО</li>\r\n\t\t\t\t\t\t\t\t\t\t<li>Технический
+      паспорт</li>\r\n\t\t\t\t\t\t\t\t\t\t<li>Инструкция по&nbsp;эксплуатации</li>\r\n\t\t\t\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+      id=\"tab-device-2\" class=\"js-tab\">\r\n\t\t\t\t\t\t\tЕщё устройство\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+      id=\"tab-device-3\" class=\"js-tab\">\r\n\t\t\t\t\t\t\tИ ещё\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+      id=\"tab-device-4\" class=\"js-tab\">\r\n\t\t\t\t\t\t\tИ б/у\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<script
+      type=\"text/javascript\">\r\n\t\t\t\t\t\t\t$('#tabs').tabs({\r\n\t\t\t\t\t\t\t\tlinkSelector:
+      '.b-tabs .link',\r\n\t\t\t\t\t\t\t\ttabSelector: '.js-tab'\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t</script>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div
+      class=\"b-inset\">\r\n\t\t\t\t<div class=\"title-container\">\r\n\t\t\t\t\t<h2
+      class=\"title\">Исторический факт</h2>\r\n\t\t\t\t\t<div class=\"additional\">\r\n\t\t\t\t\t\t<a
+      href=\"?achievements\">Все сертификаты и&nbsp;награды</a>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+      class=\"desc b-less-text\">\r\n\t\t\t\t\t<p>В&nbsp;октябре 2003 года делегация
+      Министерства Обороны США, американские компании &laquo;Kellogg Brown &amp;&nbsp;Root&raquo;
+      (KBR) и&nbsp;&laquo;Sweet Analysis Services Inc&raquo; (SASI) объявили тендер
+      на&nbsp;покупку полиграфов. В&nbsp;результате проведения полномасштабного изучения
+      выставленных на&nbsp;тендер российских и&nbsp;зарубежных образцов полиграфов
+      американские специалисты выбрали наш отечественный детектор лжи &laquo;Барьер-14&raquo;,
+      купив 18&nbsp;приборов. Это особенно важно, потому что исходит от&nbsp;американских
+      специалистов, имеющих самый большой опыт в&nbsp;разработке и&nbsp;использовании
+      детектора лжи.</p>\r\n\t\t\t\t\t<p class=\"b-last-textblock\">С&nbsp;тех пор
+      были выпущены более совершенные модели, такие как &laquo;Крис&raquo; и&nbsp;&laquo;Риф&raquo;.</p>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<h2>Гарантия
+      и&nbsp;поддержка</h2>\r\n\t\t\t<p>На&nbsp;детекторы лжи, производимые лабораторией
+      Варламова, предоставляется <nobr>5-летняя</nobr> гарантия. А&nbsp;также <nobr>10-летнее</nobr>
+      научно-техническое сопровождение, в&nbsp;течение которого покупателю бесплатно
+      передаются все программные и&nbsp;технические усовершенствования эксплуатируемого
+      полиграфа.</p>\r\n\t\t\t<p>Все детекторы лжи проходят тестовую проверку. При
+      покупке комплектуются последними версиями специализированного программного обеспечения
+      для работы с&nbsp;полиграфом &laquo;Sheriff-7M&raquo;, регулярное обновление
+      которого производится бесплатно.</p>\r\n\t\t\t<p>Приборы питаются от&nbsp;компьютера
+      и&nbsp;в&nbsp;паре с&nbsp;ноутбуком могут использоваться в&nbsp;условиях отсутствия
+      доступа к&nbsp;электросетям.</p>\r\n"
+    - devices
+    - '2012-02-09 12:55:53.599124'
+    - '2012-02-09 12:55:53.599124'
+  - - '2'
+    - Тестирование
+    - ''
+    - ! "<div class=\"h-column-60 b-section-intro\">\r\n\t<p>\r\n\t\tЕсли не&nbsp;вдаваться
+      в&nbsp;подробности, то&nbsp;для обследуемого человека процедура прохождение
+      проверки на&nbsp;полиграфе (детекторе лжи) напоминает собеседование. Ключевая
+      разница лишь в&nbsp;том, что к&nbsp;его телу подсоединены датчики, регистрирующие
+      физиологические реакции, помогающие оператору полиграфа делать выводы об&nbsp;эмоциональной
+      значимости обсуждаемой темы, выявляя затем причины реакций.</p>\r\n\t<p class=\"b-last-textblock\">\r\n\t\tПройти
+      проверку на&nbsp;полиграфе тестируемый человек может только при добровольном
+      согласии. В&nbsp;ходе обследования не&nbsp;затрагиваются вопросы личного характера:
+      вероисповедания, сексуальной ориентации, политических взглядов. Не&nbsp;подлежат
+      проверке: больные, в&nbsp;состоянии опьянения, женщины на&nbsp;поздних сроках
+      беременности и&nbsp;дети.</p>\r\n</div>\r\n"
+    - ! "<div class=\"b-intro-gallery\">\r\n\t<ul class=\"images\">\r\n\t\t<li class=\"item\">\r\n\t\t\t<a
+      class=\"link\" href=\"?\"><img alt=\"Глазами хирурга\" class=\"image\" src=\"/ckeditor_assets/pictures/1/content_report-1.jpg?1328865886\"
+      style=\"width: 124px; height: 83px; \" /> </a></li>\r\n\t\t<li class=\"item\">\r\n\t\t\t<a
+      class=\"link\" href=\"?\"><img alt=\"Они среди нас, как бы мы этого не хотели\"
+      class=\"image\" src=\"/ckeditor_assets/pictures/2/content_report-2.jpg?1328865919\"
+      style=\"width: 124px; height: 83px; \" /> </a></li>\r\n\t</ul>\r\n\t<div class=\"all-images\">\r\n\t\t<a
+      class=\"link\" href=\"?gallery\">7 фото с тестирования</a></div>\r\n</div>\r\n<p>\r\n\t&nbsp;</p>\r\n"
+    - ! "<h2 class=\"b-section-title\">\r\n\tВиды проводимых проверок на&nbsp;полиграфе</h2>\r\n<div
+      class=\"l-column-wrapper l-wrapper-42 l-equal-columns\" id=\"tabs\">\r\n\t<div
+      class=\"l-column-295 l-equal-column\">\r\n\t\t<div class=\"h-column-35 h-shift-40\">\r\n\t\t\t<ul
+      class=\"b-tabs\">\r\n\t\t\t\t<li class=\"item\">\r\n\t\t\t\t\t<a class=\"link\"
+      href=\"#tab-testing-1\"><strong>Скрининговая проверка</strong> </a></li>\r\n\t\t\t\t<li
+      class=\"item\">\r\n\t\t\t\t\t<a class=\"link\" href=\"#tab-testing-2\"><strong>Профилактическая
+      проверка</strong> </a></li>\r\n\t\t\t\t<li class=\"item\">\r\n\t\t\t\t\t<a class=\"link\"
+      href=\"#tab-testing-3\"><strong>Проверка увольняемого сотрудника</strong> </a></li>\r\n\t\t\t\t<li
+      class=\"item\">\r\n\t\t\t\t\t<a class=\"link\" href=\"#tab-testing-4\"><strong>Служебное
+      расследование</strong> </a></li>\r\n\t\t\t\t<li class=\"item\">\r\n\t\t\t\t\t<a
+      class=\"link\" href=\"#tab-testing-5\"><strong>Выездное тестирование</strong>
+      </a></li>\r\n\t\t\t</ul>\r\n\t\t\t<dl class=\"b-more-contacts\">\r\n\t\t\t\t<dt
+      class=\"title\">\r\n\t\t\t\t\tВопросы и заявки:</dt>\r\n\t\t\t\t<dd class=\"desc\">\r\n\t\t\t\t\t<strong
+      class=\"b-nobr\">+7 (495) 506-20-16</strong><br />\r\n\t\t\t\t\t<a class=\"link\"
+      href=\"mailto:info@omegaconsulting.ru\">info@omegaconsulting.ru</a></dd>\r\n\t\t\t</dl>\r\n\t\t</div>\r\n\t</div>\r\n\t<div
+      class=\"l-column-530 l-equal-column\">\r\n\t\t<div class=\"h-column-60 h-shift-40
+      b-less-text\">\r\n\t\t\t<div class=\"js-tab\" id=\"tab-testing-1\">\r\n\t\t\t\t<p>\r\n\t\t\t\t\tОбычно,
+      это прохождение психофизиологического тестирования соискателем на&nbsp;должность.
+      Использование детектора лжи позволяет выявить искажение анкетных данных и&nbsp;глубже
+      оценить личность претендента на&nbsp;вакансию для более полного представления
+      об&nbsp;его сильных и&nbsp;слабых сторонах, снижая риски работодателя.</p>\r\n\t\t\t\t<p>\r\n\t\t\t\t\tОбсуждаемые
+      темы при прохождении скрининговой проверки:</p>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tИстинность
+      данных в&nbsp;резюме;</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tПодлинность документов;</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tПричины
+      ухода с&nbsp;предыдущих мест работы;</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tПричины
+      поступления на&nbsp;работу;</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tАлкогольная,
+      наркотическая и&nbsp;игровая зависимости;</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tДолговые
+      обязательства;</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tСовершение правонарушений;</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tКонтакты
+      с&nbsp;конкурентами, криминалом;</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tСкрываемые
+      проблемы со&nbsp;здоровьем;</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tПрочее.</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t\t<div
+      class=\"js-tab\" id=\"tab-testing-2\">\r\n\t\t\t\tУговоры</div>\r\n\t\t\t<div
+      class=\"js-tab\" id=\"tab-testing-3\">\r\n\t\t\t\tУгрозы</div>\r\n\t\t\t<div
+      class=\"js-tab\" id=\"tab-testing-4\">\r\n\t\t\t\tУтюг</div>\r\n\t\t\t<div class=\"js-tab\"
+      id=\"tab-testing-5\">\r\n\t\t\t\tИглы под ногти</div>\r\n\t\t\t<script type=\"text/javascript\">\r\n\t\t\t\t\t\t\t$('#tabs').tabs({\r\n\t\t\t\t\t\t\t\tlinkSelector:
+      '.b-tabs .link',\r\n\t\t\t\t\t\t\t\ttabSelector: '.js-tab'\r\n\t\t\t\t\t\t\t});\r\n\t\t\t\t\t\t</script></div>\r\n\t</div>\r\n</div>\r\n<p>\r\n\tИспользуемые
+      методы оценки качеств личности позволяют точно позиционировать будущего сотрудника
+      внутри компании. Максимально задействовать его способности или, зная о&nbsp;недостатках,
+      предусмотреть вероятные проблемы. Тестирование на&nbsp;полиграфе (детекторе
+      лжи) позволяет получить данные о&nbsp;биографии соискателя, которые по&nbsp;каким-либо
+      обстоятельствам не&nbsp;могут быть искренне и&nbsp;правдиво им&nbsp;изложены.</p>\r\n<p>\r\n\tБольшинство
+      специалистов &laquo;Омега Консалтинг&raquo; являются профессиональными психологами
+      и&nbsp;психиатрами, имеющими собственные разработки в&nbsp;области психологии.
+      Наши полиграфологи одни из&nbsp;первых начали развивать тестирование с&nbsp;помощью
+      детектора лжи ещё на&nbsp;территории СССР. Ряд специалистов отмечены правительственными
+      наградами за&nbsp;деятельность в&nbsp;области полиграфологии.</p>\r\n<p>\r\n\tШтат
+      компании и&nbsp;оборудование позволяют провести до&nbsp;100 тестирований в&nbsp;день.
+      Клиентами &laquo;Омега Консалтинг&raquo; являются известные компании Москвы,
+      России и&nbsp;зарубежья.</p>\r\n<h2>\r\n\tОтраслевые особенности и&nbsp;особые
+      случаи</h2>\r\n<p>\r\n\tПри расследованиях мы&nbsp;придерживаемся принципа отраслевой
+      профильности. К&nbsp;примеру, в&nbsp;области финансовых нарушений работает полиграфолог
+      специализирующийся на&nbsp;финансовой сфере. В&nbsp;случае кражи со&nbsp;склада,
+      работает специалист хорошо знающий структуру нарушений в&nbsp;логистике.</p>\r\n<p>\r\n\tМы&nbsp;осуществляем
+      расследования в&nbsp;самых сложных случаях, при отказе от&nbsp;проведения работ
+      другими компаниями. Проводим перетестирования при сомнительных или неопределенных
+      заключениях сторонних полиграфологов. Для получения объективного заключения
+      во&nbsp;время сложных экспертиз в&nbsp;анализе одновременно участвуют несколько
+      наших специалистов.</p>\r\n<h2>\r\n\tСтоимость расследований</h2>\r\n<p>\r\n\tСтоимость
+      прохождения проверки на&nbsp;полиграфе (детекторе лжи) составляет 3000 рублей
+      за&nbsp;человека. Минимальная сумма заказа&nbsp;&mdash; 15&nbsp;000&nbsp;рублей.
+      При особых условиях работы стоимость проверки оговаривается заранее.</p>\r\n"
+    - testing
+    - '2012-02-09 12:56:51.039792'
+    - '2012-02-10 09:25:26.886851'
+  - - '3'
+    - Омега Консалтинг
+    - ! "\t\t\t\t<div class=\"b-gallery\">\r\n\t\t\t\t\t<a class=\"b-control b-control-prev
+      b-control-disabled-prev\" href=\"?prev\"><b></b></a>\r\n\t\t\t\t\t<div class=\"frame\">\r\n\t\t\t\t\t\t<div
+      class=\"inner\">\r\n\t\t\t\t\t\t\t<div class=\"slides\">\r\n\t\t\t\t\t\t\t\t<div
+      class=\"slide\">\r\n\t\t\t\t\t\t\t\t\t<img class=\"image\" src=\"/media/img/tmp/gallery-1.jpg\"
+      alt=\"\"/>\r\n\t\t\t\t\t\t\t\t\t<p class=\"desc\">Проведение служебных расследований
+      на&nbsp;детекторе лжи, а&nbsp;также помощь в&nbsp;подборе персонала.</p>\r\n\t\t\t\t\t\t\t\t\t<a
+      class=\"link\" href=\"?slide-link\">Виды тестирований</a>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div
+      class=\"slide\">\r\n\t\t\t\t\t\t\t\t\t<img class=\"image\" src=\"/media/img/tmp/gallery-1.jpg\"
+      alt=\"\"/>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<a
+      class=\"b-control b-control-next\" href=\"?prev\"><b></b></a>\r\n\t\t\t\t\t<div
+      class=\"dots\">\r\n\t\t\t\t\t\t<a class=\"b-dot b-dot-selected\" href=\"?\"><b></b></a><a
+      class=\"b-dot\" href=\"?\"><b></b></a><a class=\"b-dot\" href=\"?\"><b></b></a><a
+      class=\"b-dot\" href=\"?\"><b></b></a>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n"
+    - ''
+    - ''
+    - ! "\t\t\t<div class=\"l-column-wrapper l-equal-columns l-equal-columns-3\">\r\n\t\t\t\t<div
+      class=\"l-column-275 l-equal-column\">\r\n\t\t\t\t\t<div class=\"h-column-35
+      h-shift-40 b-less-text\">\r\n\t\t\t\t\t\t<h2 class=\"b-tiny-title b-first-title\">Опыт
+      с&nbsp;1994 года</h2>\r\n\t\t\t\t\t\t<p>Наши специалисты по&nbsp;праву считаются
+      лучшими в&nbsp;своей области.</p>\r\n\t\t\t\t\t\t<p>Сотрудники компании неоднократно
+      отмечены наградами правительства.</p>\r\n\t\t\t\t\t\t<p>Устройства постоянно
+      совершенствуются на&nbsp;реальной работе.</p>\r\n\t\t\t\t\t\t<div style=\"margin-bottom:
+      8px\">\r\n\t\t\t\t\t\t\t<a href=\"?about\">О&nbsp;компании</a>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+      class=\"l-column-275 l-equal-column\">\r\n\t\t\t\t\t<div class=\"h-column-35
+      h-shift-35 b-less-text\">\r\n\t\t\t\t\t\t<h2 class=\"b-tiny-title b-first-title\">Ответственность</h2>\r\n\t\t\t\t\t\t<p>Проводя
+      около тысячи исследований ежегодно мы&nbsp;берем ответственность за&nbsp;получаемую
+      персональную и&nbsp;деловую информацию.</p>\r\n\t\t\t\t\t\t<p class=\"b-last-textblock\">Вся
+      собранная в&nbsp;документальном виде информация надежно защищена, либо уничтожается
+      по&nbsp;просьбе клиентов.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+      class=\"l-column-275 l-equal-column\">\r\n\t\t\t\t\t<div class=\"h-column-40
+      h-shift-35 b-less-text\">\r\n\t\t\t\t\t\t<h2 class=\"b-tiny-title b-first-title\">Консультации</h2>\r\n\t\t\t\t\t\t<p>Мы&nbsp;способны
+      прояснить теоретические основы, обладаем решениями для различных ситуаций и&nbsp;задач.</p>\r\n\t\t\t\t\t\t<p
+      class=\"b-last-textblock\">На&nbsp;данный момент нашими специалистами написано
+      более 100 научных работ на&nbsp;тему детекции лжи.</p>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>"
+    - ''
+    - '2012-02-09 13:13:27.674875'
+    - '2012-02-09 13:13:27.674875'
+  - - '4'
+    - Обучение
+    - ''
+    - ''
+    - ''
+    - ''
+    - education
+    - '2012-02-10 08:42:39.579938'
+    - '2012-02-10 08:42:39.579938'
+  - - '5'
+    - Компания
+    - ''
+    - ''
+    - ''
+    - ''
+    - company
+    - '2012-02-10 08:42:56.654223'
+    - '2012-02-10 08:42:56.654223'
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - ramusus@gmail.com
+    - $2a$10$BU2XCVFATMDNacsXymdaRO7cg69HCGF/W/fj.Ded6uRkB4DjmC3mq
+    - !!null 
+    - !!null 
+    - '2012-02-10 08:41:16.167677'
+    - '7'
+    - '2012-02-13 10:17:37.512581'
+    - '2012-02-13 10:17:37.293522'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2012-02-09 12:52:32.899608'
+    - '2012-02-13 10:17:37.513328'
+
+---
+ckeditor_assets:
+  columns:
+  - id
+  - data_file_name
+  - data_content_type
+  - data_file_size
+  - assetable_id
+  - assetable_type
+  - type
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - report-1.jpg
+    - image/jpeg
+    - '4016'
+    - '1'
+    - User
+    - Ckeditor::Picture
+    - '2012-02-10 09:24:48.914544'
+    - '2012-02-10 09:24:48.914544'
+  - - '2'
+    - report-2.jpg
+    - image/jpeg
+    - '5553'
+    - '1'
+    - User
+    - Ckeditor::Picture
+    - '2012-02-10 09:25:19.489425'
+    - '2012-02-10 09:25:19.489425'
+
+---
+presses:
+  columns:
+  - id
+  - title
+  - date
+  - link
+  - created_at
+  - updated_at
+  - image_file_name
+  - image_content_type
+  - image_file_size
+  - image_updated_at
+  records: 
+  - - '1'
+    - Тестируем участников телепроекта ДОМ-2
+    - '2011-07-10'
+    - ''
+    - '2012-02-10 10:58:43.480775'
+    - '2012-02-11 08:36:28.116008'
+    - press-1.jpg
+    - image/jpeg
+    - '9393'
+    - '2012-02-11 08:36:28.036548'
+  - - '2'
+    - Продолжение диалога об аспектах применения полиграфа
+    - '2011-09-10'
+    - http://groups.google.com/group/paperclip-plugin/browse_thread/thread/30e8a6532671fcff
+    - '2012-02-10 10:59:01.377048'
+    - '2012-02-11 08:43:38.014353'
+    - press-2.jpg
+    - image/jpeg
+    - '4470'
+    - '2012-02-11 08:36:08.986476'
+  - - '3'
+    - Продолжение диалога об аспектах применения полиграфа
+    - '2012-02-01'
+    - http://ya.ru
+    - '2012-02-11 08:57:04.402187'
+    - '2012-02-11 08:57:04.402187'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '4'
+    - Продолжение диалога об аспектах применения полиграфа
+    - '2012-02-14'
+    - ''
+    - '2012-02-11 08:57:12.146626'
+    - '2012-02-11 08:57:12.146626'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+  - - '5'
+    - Новый
+    - '2011-10-05'
+    - ''
+    - '2012-02-11 08:57:30.764111'
+    - '2012-02-11 08:57:30.764111'
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+
+---
+queries:
+  columns:
+  - id
+  - topic
+  - description
+  - name
+  - phone
+  - time
+  - email
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - '0'
+    - ага, хочу
+    - Борис
+    - '139594'
+    - в любое время
+    - werwer@mail.ru
+    - '2012-02-11 09:12:09.93874'
+    - '2012-02-11 09:12:09.93874'
+  - - '2'
+    - '0'
+    - sdf
+    - Борис
+    - dg
+    - sdf
+    - ramusus@gmail.com
+    - '2012-02-11 10:41:14.967401'
+    - '2012-02-11 10:41:14.967401'
+  - - '3'
+    - '0'
+    - sdfsdf
+    - sdfsdf
+    - dfsdfsf
+    - dfdfdf
+    - ramusus@gmial.com
+    - '2012-02-11 10:47:17.022056'
+    - '2012-02-11 10:47:17.022056'
+  - - '4'
+    - '0'
+    - sdfsdsdsdsdf
+    - sdfsdf
+    - dfsdfsf
+    - dfdfdf
+    - ramusus@gmial.com
+    - '2012-02-11 10:51:48.390649'
+    - '2012-02-11 10:51:48.390649'
+  - - '5'
+    - '2'
+    - wrwwer
+    - sdfsdf
+    - dfsdfsf
+    - dfdfdf
+    - ramusus@gmial.com
+    - '2012-02-11 10:55:23.237304'
+    - '2012-02-11 10:55:23.237304'
+  - - '6'
+    - '2'
+    - wrwwer
+    - sdfsdf
+    - dfsdfsf
+    - dfdfdf
+    - ramusus@gmial.com
+    - '2012-02-11 10:56:11.993421'
+    - '2012-02-11 10:56:11.993421'
+  - - '7'
+    - '2'
+    - wrwwer
+    - sdfsdf
+    - dfsdfsf
+    - dfdfdf
+    - ramusus@gmial.com
+    - '2012-02-11 10:56:54.646687'
+    - '2012-02-11 10:56:54.646687'

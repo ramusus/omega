@@ -14,6 +14,7 @@ gem 'capistrano'
 gem 'validates_email_format_of', :git => 'git://github.com/alexdunae/validates_email_format_of.git'
 gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'jquery-rails'
+gem 'yaml_db', :git => 'git://github.com/lostapathy/yaml_db.git'
 
 gem 'sqlite3'
 
