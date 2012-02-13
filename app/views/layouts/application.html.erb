@@ -53,12 +53,13 @@
                 <div class="b-copyright b-copyright-infolio">Дизайн и&nbsp;разработка сайта&nbsp;&mdash; <a class="link" href="http://infolio.ru/">infolio&nbsp;/&nbsp;2&deg;</a></div>
             </div>
         </div>
+	<% if @query %>
         <div class="l-modal">
             <div class="l-modal-inner">
                 <div class="b-logo b-logo-title">
                     <b class="logo"></b> Запрос консультации
                 </div>
-                <%= form_for(@query, :html => {:class => "b-form", :id => "feedback"}) do |f| %>
+		<%= form_for(@query, :html => {:class => "b-form", :id => "feedback"}) do |f| %>
 
                     <% if @query.errors.any? %>
                     <div id="error_explanation">
@@ -126,5 +127,6 @@
         <script type="text/javascript">
             feedback.init();
         </script>
+	<% end %>
     </body>
 </html>
