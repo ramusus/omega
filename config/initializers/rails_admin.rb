@@ -120,4 +120,16 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Chunk do
+    list do
+      include_fields :title, :code, :content
+    end
+    edit do
+      include_fields :title, :code
+      include_fields :content do
+        ckeditor true
+      end
+    end
+  end
+
 end

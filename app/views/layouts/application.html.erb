@@ -34,11 +34,13 @@
                     <a class="link" href="?contacts"><b class="b-icon b-icon-mail"><b></b></b> Контакты в Москве</a>
                 </li>
             </ul>
-            <div class="b-bookmark b-bookmark-show">
-                <a id="show-feedback" class="link" href="?">
-                    <span class="text">Запрос консультации</span>
-                </a>
-            </div>
+            <% if @query %>
+                <div class="b-bookmark b-bookmark-show">
+                    <a id="show-feedback" class="link" href="?">
+                        <span class="text">Запрос консультации</span>
+                    </a>
+                </div>
+            <% end %>
         </div>
         <%= content_for?(:content) ? yield(:content) : yield %>
         <div class="l-footer">
@@ -47,86 +49,85 @@
                     <span class="text">Омега Консалтинг</span>
                 </a>
             </div>
-            <%= render 'layouts/footer_links' %>
+            <%= @footer_links ? @footer_links.content.html_safe : '' %>
             <div class="l-wrapper">
-                <div class="b-copyright">&copy;&nbsp;<r:date format="%Y" />, <a class="link" href="?">ООО&nbsp;Омега Консалтинг</a></div>
+                <div class="b-copyright">&copy;&nbsp;2012, <a class="link" href="/">ООО&nbsp;Омега Консалтинг</a></div>
                 <div class="b-copyright b-copyright-infolio">Дизайн и&nbsp;разработка сайта&nbsp;&mdash; <a class="link" href="http://infolio.ru/">infolio&nbsp;/&nbsp;2&deg;</a></div>
             </div>
         </div>
-	<% if @query %>
-        <div class="l-modal">
-            <div class="l-modal-inner">
-                <div class="b-logo b-logo-title">
-                    <b class="logo"></b> Запрос консультации
-                </div>
-		<%= form_for(@query, :html => {:class => "b-form", :id => "feedback"}) do |f| %>
-
-                    <% if @query.errors.any? %>
-                    <div id="error_explanation">
-                    <h2><%= pluralize(@query.errors.count, "error") %> prohibited this query from being saved:</h2>
-
-                    <ul>
-                    <% @query.errors.full_messages.each do |msg| %>
-                    <li><%= msg %></li>
-                    <% end %>
-                    </ul>
+        <% if @query %>
+            <div class="l-modal">
+                <div class="l-modal-inner">
+                    <div class="b-logo b-logo-title">
+                        <b class="logo"></b> Запрос консультации
                     </div>
-                    <% end %>
+                    <%= form_for(@query, :html => {:class => "b-form", :id => "feedback"}) do |f| %>
+                        <% if @query.errors.any? %>
+                        <div id="error_explanation">
+                        <h2><%= pluralize(@query.errors.count, "error") %> prohibited this query from being saved:</h2>
 
-                    <fieldset>
-                        <div class="b-field">
-                            <label class="b-label" for="f-topic">Интересующая тема</label>
-                            <%= f.select(:topic, @query.topic_enum, {}, :class => "b-title-input b-wide-select", :id => "f-topic") %>
+                        <ul>
+                        <% @query.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                        <% end %>
+                        </ul>
                         </div>
-                        <div class="b-field">
-                            <label class="b-label" for="f-body">Описание задачи и вопросы</label>
-                            <div class="b-wide-input">
-                                <%= f.text_area(:description, :class => "b-input", :id => "f-body", :rows => 7, :cols => 40) %>
+                        <% end %>
+
+                        <fieldset>
+                            <div class="b-field">
+                                <label class="b-label" for="f-topic">Интересующая тема</label>
+                                <%= f.select(:topic, @query.topic_enum, {}, :class => "b-title-input b-wide-select", :id => "f-topic") %>
                             </div>
-                        </div>
-                        <div class="b-field">
-                            <label class="b-label" for="f-name">Контактная информация</label>
-                            <label class="b-hint-label" for="f-name">Имя, фамилия</label>
-                            <div class="b-compact-field b-wide-input">
-                                <%= f.text_field(:name, :class => "b-input", :id => "f-name") %>
-                            </div>
-                            <label class="b-hint-label" for="f-phone">Телефон</label>
-                            <div class="b-compact-field b-wide-input">
-                                <%= f.telephone_field(:phone, :class => "b-input", :id => "f-phone") %>
-                            </div>
-                            <label class="b-hint-label" for="f-time">Удобное время для звонка</label>
-                            <div class="b-compact-field b-wide-input">
-                                <%= f.text_field(:time, :class => "b-input", :id => "f-time") %>
-                            </div>
-                            <label class="b-hint-label" for="f-email">Email</label>
-                            <div class="b-compact-field b-wide-input">
-                                <%= f.email_field(:email, :class => "b-input", :id => "f-email") %>
-                            </div>
-                        </div>
-                        <div class="b-submit-group">
-                            <div id="send-feedback" class="b-button">
-                                <div class="inner">
-                                    <input type="submit" value="Отправить"/>
+                            <div class="b-field">
+                                <label class="b-label" for="f-body">Описание задачи и вопросы</label>
+                                <div class="b-wide-input">
+                                    <%= f.text_area(:description, :class => "b-input", :id => "f-body", :rows => 7, :cols => 40) %>
                                 </div>
-                                <i class="corner"></i>
                             </div>
-                        </div>
-                    </fieldset>
-                <% end %>
-                <div id="message" class="b-message">
-                    <p class="desc">Наш представитель свяжется с вами в <span class="part">указанное</span> время.</p>
-                    <a id="message-hide-feedback" class="link" href="?">Закрыть окно</a>
+                            <div class="b-field">
+                                <label class="b-label" for="f-name">Контактная информация</label>
+                                <label class="b-hint-label" for="f-name">Имя, фамилия</label>
+                                <div class="b-compact-field b-wide-input">
+                                    <%= f.text_field(:name, :class => "b-input", :id => "f-name") %>
+                                </div>
+                                <label class="b-hint-label" for="f-phone">Телефон</label>
+                                <div class="b-compact-field b-wide-input">
+                                    <%= f.telephone_field(:phone, :class => "b-input", :id => "f-phone") %>
+                                </div>
+                                <label class="b-hint-label" for="f-time">Удобное время для звонка</label>
+                                <div class="b-compact-field b-wide-input">
+                                    <%= f.text_field(:time, :class => "b-input", :id => "f-time") %>
+                                </div>
+                                <label class="b-hint-label" for="f-email">Email</label>
+                                <div class="b-compact-field b-wide-input">
+                                    <%= f.email_field(:email, :class => "b-input", :id => "f-email") %>
+                                </div>
+                            </div>
+                            <div class="b-submit-group">
+                                <div id="send-feedback" class="b-button">
+                                    <div class="inner">
+                                        <input type="submit" value="Отправить"/>
+                                    </div>
+                                    <i class="corner"></i>
+                                </div>
+                            </div>
+                        </fieldset>
+                    <% end %>
+                    <div id="message" class="b-message">
+                        <p class="desc">Наш представитель свяжется с вами в <span class="part">указанное</span> время.</p>
+                        <a id="message-hide-feedback" class="link" href="?">Закрыть окно</a>
+                    </div>
+                </div>
+                <div class="b-bookmark b-bookmark-hide">
+                    <a id="hide-feedback" class="link" href="?">
+                        <span class="text">Скрыть форму</span>
+                    </a>
                 </div>
             </div>
-            <div class="b-bookmark b-bookmark-hide">
-                <a id="hide-feedback" class="link" href="?">
-                    <span class="text">Скрыть форму</span>
-                </a>
-            </div>
-        </div>
-        <script type="text/javascript">
-            feedback.init();
-        </script>
-	<% end %>
+            <script type="text/javascript">
+                feedback.init();
+            </script>
+        <% end %>
     </body>
 </html>
