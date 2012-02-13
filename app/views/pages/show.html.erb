@@ -3,6 +3,7 @@
 <% content_for :extra_head do %>
     <script type="text/javascript">
       $(function() {
+        slideShow.init();
         $('ul.b-main-menu li#menu_<%= @page.slug %> a.link').addClass('selected');
       });
     </script>

@@ -13,7 +13,9 @@
 		<script type="text/javascript" src="./js/jquery-1.6.2.min.js"></script>
 		<script type="text/javascript" src="./js/jquery.hints.js"></script>
 		<script type="text/javascript" src="./js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="./js/slideshow.js"></script>
 		<script type="text/javascript" src="./js/feedback.js"></script>
+		slideshow.js
 	</head>
 	<body>
 		<div class="l-header">
@@ -53,8 +55,8 @@
 						<a class="link" href="?4">Компания</a>
 					</li>
 				</ul>
-				<div class="b-gallery">
-					<a class="b-control b-control-prev b-control-disabled-prev" href="?prev"><b></b></a>
+				<div id="gallery" class="b-gallery">
+					<a class="b-control b-control-prev" href="?"><b></b></a>
 					<div class="frame">
 						<div class="inner">
 							<div class="slides">
@@ -66,14 +68,21 @@
 								<div class="slide">
 									<img class="image" src="./img/tmp/gallery-1.jpg" alt=""/>
 								</div>
+								<div class="slide">
+									<img class="image" src="./img/tmp/gallery-1.jpg" alt=""/>
+								</div>
+								<div class="slide">
+									<img class="image" src="./img/tmp/gallery-1.jpg" alt=""/>
+								</div>
 							</div>
 						</div>
 					</div>
-					<a class="b-control b-control-next" href="?prev"><b></b></a>
-					<div class="dots">
-						<a class="b-dot b-dot-selected" href="?"><b></b></a><a class="b-dot" href="?"><b></b></a><a class="b-dot" href="?"><b></b></a><a class="b-dot" href="?"><b></b></a>
-					</div>
+					<a class="b-control b-control-next" href="?"><b></b></a>
+					<div class="dots"></div>
 				</div>
+				<script type="text/javascript">
+					slideShow.init();
+				</script>
 			</div>
 			<div class="l-column-wrapper l-equal-columns l-equal-columns-3">
 				<div class="l-column-275 l-equal-column">
