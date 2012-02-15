@@ -67,6 +67,7 @@
             _message.hide();
 
             showModal();
+            enableHints();
             event.preventDefault();
         });
 
@@ -140,6 +141,17 @@
         // Отправка формы
         $(_form).ajaxForm({
             type: 'post',
+            beforeSerialize: function() {
+                if(_phoneInput.val() == SETTINGS.phoneHint)
+                    _phoneInput.val('');
+                if(_timeInput.val() == SETTINGS.timeHint)
+                    _timeInput.val('');
+                if(_nameInput.val() == SETTINGS.nameHint)
+                    _nameInput.val('');
+                if(_emailInput.val() == SETTINGS.emailHint)
+                    _emailInput.val('');
+                return true;
+            },
             success: function() {
                 // Оптравляем данные на сервер, а затем
 
@@ -192,7 +204,7 @@
     function validateForm(){
         var emailRegexp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-        if( _textInput.val() != '' && (_nameInput.val() != '' && _nameInput.val() != SETTINGS.nameHint) && (_phoneInput.val() != '' && _phoneInput.val() != SETTINGS.phoneHint) && emailRegexp.test(_emailInput.val()) ){
+        if((_phoneInput.val() != '' && _phoneInput.val() != SETTINGS.phoneHint) || emailRegexp.test(_emailInput.val()) ){
             enableSubmit();
         }
         else {

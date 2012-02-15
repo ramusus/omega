@@ -9,6 +9,7 @@ ru:
       user: "Пользователь"
       query: "Запрос"
       press: "Пресса"
+      chunk: "Блок"
     attributes:
       page:
         title: "Заголовок"
@@ -29,3 +30,7 @@ ru:
         phone: "Телефон"
         time: "Удобное время для звонка"
         email: "Email"
+      chunk:
+        title: "Название"
+        code: "Код"
+        content: "Содержимое"

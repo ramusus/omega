@@ -24,17 +24,7 @@
     </head>
     <body>
         <div class="l-header">
-            <div class="b-langs">
-                <a class="link" href="?">In English</a>
-            </div>
-            <ul class="b-contacts">
-                <li class="item digits">
-                    <span class="g-nobr">+7 (495) 506-20-16</span>
-                </li>
-                <li class="item">
-                    <a class="link" href="?contacts"><b class="b-icon b-icon-mail"><b></b></b> Контакты в Москве</a>
-                </li>
-            </ul>
+            <%= @header_links ? @header_links.content.html_safe : '' %>
             <% if @query %>
                 <div class="b-bookmark b-bookmark-show">
                     <a id="show-feedback" class="link" href="?">
@@ -53,7 +43,7 @@
             <%= @footer_links ? @footer_links.content.html_safe : '' %>
             <div class="l-wrapper">
                 <div class="b-copyright">&copy;&nbsp;2012, <a class="link" href="/">ООО&nbsp;Омега Консалтинг</a></div>
-                <div class="b-copyright b-copyright-infolio">Дизайн и&nbsp;разработка сайта&nbsp;&mdash; <a class="link" href="http://infolio.ru/">infolio&nbsp;/&nbsp;2&deg;</a></div>
+                <div class="b-copyright b-copyright-infolio"><a class="no-link" href="http://infolio.ru/">Дизайн и&nbsp;разработка сайта</a>&nbsp;&mdash; <a class="link" href="http://infolio.ru/">infolio&nbsp;/&nbsp;2&deg;</a></div>
             </div>
         </div>
         <% if @query %>

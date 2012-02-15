@@ -72,6 +72,9 @@ ru:
         breadcrumb: "удаление"
         link: "Удалить '%{object_label}'"
         done: "удалено"
+      bulk_delete:
+        breadcrumb: "удаление выбранных"
+        bulk_link: "Удаление выбранных"
       export:
         title: "Экспорт %{model_label}"
         menu: "Экспорт"
