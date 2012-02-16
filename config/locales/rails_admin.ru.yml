@@ -1,3 +1,5 @@
+# Russian. Updated 2012-02-15
+
 ru:
   home:
     name: "Главная"
@@ -74,7 +76,7 @@ ru:
         done: "удалено"
       bulk_delete:
         breadcrumb: "удаление выбранных"
-        bulk_link: "Удаление выбранных"
+        bulk_link: "Удаление выбранных %{model_label_plural}"
       export:
         title: "Экспорт %{model_label}"
         menu: "Экспорт"

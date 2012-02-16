@@ -461,6 +461,10 @@ SUB {
 	.b-copyright .link:hover {
 		color: #FFF;
 		}
+	.b-copyright .invisible-link {
+		text-decoration: none;
+		color: #AAA;
+		}
 .b-copyright-infolio {
 	float: right;
 	width: 140px;
@@ -577,6 +581,12 @@ SUB {
 	line-height: 24px;
 	color: #333;
 	}
+	.b-less-title .link {
+		color: #333;
+		}
+	.b-less-title .link:hover {
+		color: #676767;
+		}
 
 /* Tiny title */
 .b-tiny-title {

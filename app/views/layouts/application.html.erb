@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xml:lang="ru" lang="ru">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
@@ -13,8 +13,8 @@
         <!--[if lte IE 7]>
             <link rel="stylesheet" type="text/css" href="/media/css/ie7.css"/>
         <![endif]-->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script>
+        <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="/media/js/jquery.form.js"></script>
         <script type="text/javascript" src="/media/js/jquery.tabs.js"></script>
         <script type="text/javascript" src="/media/js/jquery.hints.js"></script>
         <script type="text/javascript" src="/media/js/jquery.cookie.js"></script>
@@ -43,7 +43,7 @@
             <%= @footer_links ? @footer_links.content.html_safe : '' %>
             <div class="l-wrapper">
                 <div class="b-copyright">&copy;&nbsp;2012, <a class="link" href="/">ООО&nbsp;Омега Консалтинг</a></div>
-                <div class="b-copyright b-copyright-infolio"><a class="no-link" href="http://infolio.ru/">Дизайн и&nbsp;разработка сайта</a>&nbsp;&mdash; <a class="link" href="http://infolio.ru/">infolio&nbsp;/&nbsp;2&deg;</a></div>
+                <div class="b-copyright b-copyright-infolio"><a href="http://infolio.ru/" class="invisible-link">Дизайн и&nbsp;разработка сайта</a>&nbsp;&mdash; <a class="link" href="http://infolio.ru/">infolio&nbsp;/&nbsp;2&deg;</a></div>
             </div>
         </div>
         <% if @query %>
