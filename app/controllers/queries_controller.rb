@@ -17,7 +17,7 @@ class QueriesController < ApplicationController
 
     respond_to do |format|
       if @query.save
-        for user in User.all
+        for user in User.find(:all, :conditions => ["new_query_email = true"])
           UserMailer.new_query_email(user, @query).deliver
         end
         format.json { render json: @query, status: :created, location: @query }

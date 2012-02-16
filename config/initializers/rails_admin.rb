@@ -132,4 +132,15 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model User do
+    edit do
+      include_fields :email, :password, :password_confirmation, :new_query_email,
+          :reset_password_sent_at, :remember_created_at, :sign_in_count,
+          :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip, :last_sign_in_ip
+      field :new_query_email, :boolean do
+        read_only false
+      end
+    end
+  end
+
 end
