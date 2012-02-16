@@ -34,3 +34,5 @@ ru:
         title: "Название"
         code: "Код"
         content: "Содержимое"
+      user:
+        new_query_email: "Оповещать о новых заявках"
