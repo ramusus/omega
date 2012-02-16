@@ -1,0 +1,15 @@
+Приветствуем!
+
+Новый запрос консультации на сайте omegaconsulting.ru на тему "<%= @query.topic %>" <% if @query.name %> от пользователя <%= @query.name %>.<% end %>
+
+<% if @query.description %>Описание задачи и вопросы: <%= @query.description %><% end %>
+
+<% if @query.phone %>Телефон: <%= @query.phone %><% end %>
+
+<% if @query.time %>Удобное время для звонка: <%= @query.time %><% end %>
+
+<% if @query.email %>Email: <%= @query.email %><% end %>
+
+--
+C уважением
+http://omegaconsulting.ru

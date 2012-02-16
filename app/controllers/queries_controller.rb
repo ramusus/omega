@@ -17,6 +17,7 @@ class QueriesController < ApplicationController
 
     respond_to do |format|
       if @query.save
+        UserMailer.new_query_email(@query).deliver
         format.json { render json: @query, status: :created, location: @query }
       else
         format.json { render json: @query.errors, status: :unprocessable_entity }
