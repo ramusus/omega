@@ -94,8 +94,6 @@
         }).blur(validateForm);
 
         _nameInput.keyup(function(){
-            validateForm();
-
             clearTimeout(_nameTimeout);
             _nameTimeout = setTimeout(function(){
                 if( _nameInput.val() != SETTINGS.nameHint ){
@@ -204,12 +202,11 @@
     function validateForm(){
         var emailRegexp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-        if((_phoneInput.val() == '' || _phoneInput.val() == SETTINGS.phoneHint) &&
-            (_emailInput.val() == '' || _emailInput.val() == SETTINGS.emailHint || !emailRegexp.test(_emailInput.val())) ||
-            (_emailInput.val() != '' && !emailRegexp.test(_emailInput.val()) )) {
-            disableSubmit();
-        } else {
+        if((_phoneInput.val() != '' && _phoneInput.val() != SETTINGS.phoneHint) ||
+            (_emailInput.val() != '' && _emailInput.val() != SETTINGS.emailHint && emailRegexp.test(_emailInput.val()) )) {
             enableSubmit();
+        } else {
+            disableSubmit();
         }
     }
 
