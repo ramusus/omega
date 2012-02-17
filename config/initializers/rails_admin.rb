@@ -95,6 +95,7 @@ RailsAdmin.config do |config|
       include_fields :title, :slug
       include_fields :top, :top_left, :top_right, :content do
         ckeditor true
+        ckeditor_config_js '/javascripts/ckeditor/config.js'
       end
     end
   end
