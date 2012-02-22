@@ -14,12 +14,15 @@
             <link rel="stylesheet" type="text/css" href="/media/css/ie7.css"/>
         <![endif]-->
         <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="/media/js/jquery.form.js"></script>
+        <script type="text/javascript" src="/media/js/jquery.hints.js"></script>
+        <script type="text/javascript" src="/media/js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="/media/js/jquery.history.js"></script>
         <script type="text/javascript" src="/media/js/jquery.tabs.js"></script>
         <script type="text/javascript" src="/media/js/jquery.hints.js"></script>
         <script type="text/javascript" src="/media/js/jquery.cookie.js"></script>
         <script type="text/javascript" src="/media/js/slideshow.js"></script>
         <script type="text/javascript" src="/media/js/feedback.js"></script>
+        <script type="text/javascript" src="/media/js/modal.js"></script>
         <%= yield :extra_head %>
     </head>
     <body>
@@ -27,7 +30,7 @@
             <%= @header_links ? @header_links.content.html_safe : '' %>
             <% if @query %>
                 <div class="b-bookmark b-bookmark-show">
-                    <a id="show-feedback" class="link" href="?">
+                    <a id="show-feedback" class="link js-modal" href="#feedback-container">
                         <span class="text">Запрос консультации</span>
                     </a>
                 </div>
@@ -47,8 +50,8 @@
             </div>
         </div>
         <% if @query %>
-            <div class="l-modal">
-                <div class="l-modal-inner">
+            <div id="feedback-container" class="b-modal-content">
+                <div class="b-feedback">
                     <div class="b-logo b-logo-title">
                         <b class="logo"></b> Запрос консультации
                     </div>

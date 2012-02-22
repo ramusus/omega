@@ -11,6 +11,7 @@
 			<link rel="stylesheet" type="text/css" href="css/ie7.css"/>
 		<![endif]-->
 		<script type="text/javascript" src="./js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.history.js"></script>
 		<script type="text/javascript" src="./js/jquery.tabs.js"></script>
 	</head>
 	<body>
@@ -179,9 +180,22 @@
 							И б/у
 						</div>
 						<script type="text/javascript">
-							$('#tabs').tabs({
-								linkSelector: '.b-tabs .link',
-								tabSelector: '.js-tab'
+							$(function(){
+								$('#tabs').tabs({
+									linkSelector: '.b-tabs .link',
+									tabSelector: '.js-tab',
+									onSwitchTab: function(){
+										$.history.load( $(this).attr('href').substr(5) );
+									}
+								});
+								
+								$.history.init(function(hash){
+									if( hash == '' ){
+										hash = 'device-1';
+									}
+									hash = hash.replace('tab-', '');
+									$('#tabs a[href=#tab-' + hash + ']').trigger('clickOnly');
+								});
 							});
 						</script>
 					</div>

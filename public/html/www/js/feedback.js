@@ -1,254 +1,252 @@
-﻿var feedback = (function () {
-    var SETTINGS = {
-        modalSelector: '.l-modal',
-        modalClassForHtml: 'l-theater',
-        showSelector: '#show-feedback',
-        hideSelector: '#hide-feedback',
-        hideFromMessageSelector: '#message-hide-feedback',
-        formSelector: '#feedback',
-        hintLabelSelector: '.b-hint-label',
-        textInputSelector: '#f-body',
-        nameInputSelector: '#f-name',
-        phoneInputSelector: '#f-phone',
-        timeInputSelector: '#f-time',
-        emailInputSelector: '#f-email',
-        timePartSelector: '.part',
-        nameHint: 'Имя, фамилия',
-        phoneHint: 'Телефон',
-        timeHint: 'Удобное время для звонка',
-        emailHint: 'Email',
-        submitSelector: '#send-feedback',
-        messageSelector: '#message',
-        disabledButtonClass: 'b-button-disabled',
-        cookie: {
-            expires: 365,
-            path: '/'
-        }
-    };
+﻿/*
+ * Форма обратной связи
+ * Требует:
+ *   jquery.hints.js
+ *   modal.js
+ */
 
-    var _html, _body, _modal, _form,
-        _textInput, _nameInput, phoneInput, _timeInput, emailInput,
-        _textTimeout, _nameTimeout, _phoneTimeout, _timeTimeout, _emailTimeout, _hideTimeout,
-        _submit, _submitButton, _message;
-
-    function initForm(){
-        var textFromCookie = $.cookie('text'),
-            nameFromCookie = $.cookie('name'),
-            phoneFromCookie = $.cookie('phone'),
-            timeFromCookie = $.cookie('time'),
-            emailFromCookie = $.cookie('email');
-
-        disableSubmit();
-
-        if( textFromCookie ){
-            _textInput.val(textFromCookie);
-        }
-        if( nameFromCookie ){
-            _nameInput.val(nameFromCookie);
-        }
-        if( phoneFromCookie ){
-            _phoneInput.val(phoneFromCookie);
-        }
-        if( timeFromCookie ){
-            _timeInput.val(timeFromCookie);
-        }
-        if( emailFromCookie ){
-            _emailInput.val(emailFromCookie);
-        }
-    }
-
-    function assignEvents(){
-
-        // Показ формы
-        $(SETTINGS.showSelector).click(function(event){
-            clearTimeout(_hideTimeout);
-
-            _form.show();
-            _message.hide();
-
-            showModal();
-            enableHints();
-            event.preventDefault();
-        });
-
-        // Скрытие формы
-        $(SETTINGS.hideSelector).click(function(event){
-            hideModal();
-            event.preventDefault();
-        });
-
-        $(SETTINGS.hideFromMessageSelector).click(function(event){
-            hideModal();
-            event.preventDefault();
-        });
-
-        // Валидация формы и сохранение полей в куки
-        _textInput.keyup(function(){
-            validateForm();
-
-            clearTimeout(_textTimeout);
-            _textTimeout = setTimeout(function(){
-                $.cookie('text', _textInput.val(), SETTINGS.cookie);
-            }, 1000);
-
-        }).blur(validateForm);
-
-        _nameInput.keyup(function(){
-            clearTimeout(_nameTimeout);
-            _nameTimeout = setTimeout(function(){
-                if( _nameInput.val() != SETTINGS.nameHint ){
-                    $.cookie('name', _nameInput.val(), SETTINGS.cookie);
-                }
-            }, 1000);
-
-        }).blur(validateForm);
-
-        _phoneInput.keyup(function(){
-            validateForm();
-
-            clearTimeout(_phoneTimeout);
-            _phoneTimeout = setTimeout(function(){
-                if( _phoneInput.val() != SETTINGS.phoneHint ){
-                    $.cookie('phone', _phoneInput.val(), SETTINGS.cookie);
-                }
-            }, 1000);
-
-        }).blur(validateForm);
-
-        _timeInput.keyup(function(){
-            clearTimeout(_timeTimeout);
-            _timeTimeout = setTimeout(function(){
-                if( _timeInput.val() != SETTINGS.timeHint ){
-                    $.cookie('time', _timeInput.val(), SETTINGS.cookie);
-                }
-            }, 1000);
-        });
-
-        _emailInput.keyup(function(){
-            validateForm();
-
-            clearTimeout(_emailTimeout);
-            _emailTimeout = setTimeout(function(){
-                if( _emailInput.val() != SETTINGS.emailHint ){
-                    $.cookie('email', _emailInput.val(), SETTINGS.cookie);
-                }
-            }, 1000);
-
-        }).blur(validateForm).keyup();
-
-        // Отправка формы
-        $(_form).ajaxForm({
-            type: 'post',
-            beforeSerialize: function() {
-                if(_phoneInput.val() == SETTINGS.phoneHint)
-                    _phoneInput.val('');
-                if(_timeInput.val() == SETTINGS.timeHint)
-                    _timeInput.val('');
-                if(_nameInput.val() == SETTINGS.nameHint)
-                    _nameInput.val('');
-                if(_emailInput.val() == SETTINGS.emailHint)
-                    _emailInput.val('');
-                return true;
-            },
-            success: function() {
-                // Оптравляем данные на сервер, а затем
-
-                if( _timeInput.val() == '' || _timeInput.val() == SETTINGS.timeHint ){
-                    $(SETTINGS.timePartSelector, _message).text('ближайшее');
-                }
-
-                _form.hide();
-                _message.show();
-
-                _textInput.val('');
-                $.cookie('text', null, SETTINGS.cookie);
-
-                _hideTimeout = setTimeout(hideModal, 5000);
-
-    //            event.preventDefault();
-            }
-        });
-    }
-
-    function enableHints(){
-        $(SETTINGS.hintLabelSelector).hints();
-    }
-
-    function showModal(){
-        if( $.browser.mozilla ){
-            _body.addClass(SETTINGS.modalClassForHtml);
-        }
-        else{
-            if( $.browser.msie && $.browser.version == '6.0' ){
-                _html.scrollTop(0);
-            }
-            _html.addClass(SETTINGS.modalClassForHtml);
-        }
-
-        _modal.show();
-    }
-
-    function hideModal(){
-        if( $.browser.mozilla ){
-            _body.removeClass(SETTINGS.modalClassForHtml);
-        }
-        else{
-            _html.removeClass(SETTINGS.modalClassForHtml);
-        }
-
-        _modal.hide();
-    }
-
-    function validateForm(){
-        var emailRegexp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
-        if((_phoneInput.val() != '' && _phoneInput.val() != SETTINGS.phoneHint) ||
-            (_emailInput.val() != '' && _emailInput.val() != SETTINGS.emailHint && emailRegexp.test(_emailInput.val()) )) {
-            enableSubmit();
-        } else {
-            disableSubmit();
-        }
-    }
-
-    function disableSubmit(){
-        _submit.addClass(SETTINGS.disabledButtonClass);
-        _submitButton.attr('disabled', 'disabled');
-    }
-
-    function enableSubmit(){
-        _submit.removeClass(SETTINGS.disabledButtonClass);
-        _submitButton.removeAttr('disabled');
-    }
-
-    return {
-        init: function(userSettings){
-            $.extend(SETTINGS, userSettings);
-
-            _html = $(document.documentElement);
-            _body = $(document.body);
-            _modal = $(SETTINGS.modalSelector);
-            _form = $(SETTINGS.formSelector);
-
-            _textInput = $(SETTINGS.textInputSelector);
-            _nameInput = $(SETTINGS.nameInputSelector);
-            _phoneInput = $(SETTINGS.phoneInputSelector);
-            _timeInput = $(SETTINGS.timeInputSelector);
-            _emailInput = $(SETTINGS.emailInputSelector);
-
-            _textTimeout = 0;
-            _nameTimeout = 0;
-            _phoneTimeout = 0;
-            _timeTimeout = 0;
-            _emailTimeout = 0;
-            _hideTimeout = 0;
-
-            _submit = $(SETTINGS.submitSelector);
-            _submitButton = $('input', _submit);
-            _message = $(SETTINGS.messageSelector);
-
-            initForm();
-            assignEvents();
-            enableHints();
-        }
-    };
+var feedback = (function () {
+	var SETTINGS = {
+		formSelector: '#feedback',
+		inputSelectors: {
+			text: '#f-body',
+			name: '#f-name',
+			phone: '#f-phone',
+			time: '#f-time',
+			email: '#f-email'
+		},
+		hintLabelSelector: '.b-hint-label',
+		hints: {
+			name: 'Имя, фамилия',
+			phone: 'Телефон',
+			time: 'Удобное время для звонка',
+			email: 'Email'
+		},
+		submitSelector: '#send-feedback',
+		disabledButtonClass: 'b-button-disabled',
+		messageSelector: '#message',
+		hideFromMessageSelector: '#message-hide-feedback',
+		timePartSelector: '.part',
+		cookie: {
+			expires: 365,
+			path: '/'
+		}
+	};
+	
+	var _form, _inputs, _timeouts, _submit, _submitButton, _message;
+	
+	function initForm(){
+		var textFromCookie = $.cookie('text'),
+			nameFromCookie = $.cookie('name'),
+			phoneFromCookie = $.cookie('phone'),
+			timeFromCookie = $.cookie('time'),
+			emailFromCookie = $.cookie('email');
+			
+		disableSubmit();
+		
+		if( textFromCookie ){
+			_inputs.text.val(textFromCookie);
+		}
+		if( nameFromCookie ){
+			_inputs.name.val(nameFromCookie);
+		}
+		if( phoneFromCookie ){
+			_inputs.phone.val(phoneFromCookie);
+		}
+		if( timeFromCookie ){
+			_inputs.time.val(timeFromCookie);
+		}
+		if( emailFromCookie ){
+			_inputs.email.val(emailFromCookie);
+		}
+	}
+	
+	function assignEvents(){
+		// Валидация формы и сохранение полей в куки
+		_inputs.text.keyup(function(){
+			validateForm();
+			
+			clearTimeout(_timeouts.text);
+			_timeouts.text = setTimeout(function(){
+				$.cookie('text', _inputs.text.val(), SETTINGS.cookie);
+			}, 1000);
+		
+		}).blur(validateForm);
+		
+		_inputs.name.keyup(function(){
+			validateForm();
+			
+			clearTimeout(_timeouts.name);
+			_timeouts.name = setTimeout(function(){
+				if( _inputs.name.val() != SETTINGS.hints.name ){
+					$.cookie('name', _inputs.name.val(), SETTINGS.cookie);
+				}
+			}, 1000);
+		
+		}).blur(validateForm);
+		
+		_inputs.phone.keyup(function(){
+			validateForm();
+			
+			clearTimeout(_timeouts.phone);
+			_timeouts.phone = setTimeout(function(){
+				if( _inputs.phone.val() != SETTINGS.hints.phone ){
+					$.cookie('phone', _inputs.phone.val(), SETTINGS.cookie);
+				}
+			}, 1000);
+		
+		}).blur(validateForm);
+		
+		_inputs.time.keyup(function(){
+			clearTimeout(_timeouts.time);
+			_timeouts.time = setTimeout(function(){
+				if( _inputs.time.val() != SETTINGS.hints.time ){
+					$.cookie('time', _inputs.time.val(), SETTINGS.cookie);
+				}
+			}, 1000);
+		});
+		
+		_inputs.email.keyup(function(){
+			validateForm();
+			
+			clearTimeout(_timeouts.email);
+			_timeouts.email = setTimeout(function(){
+				if( _inputs.email.val() != SETTINGS.hints.email ){
+					$.cookie('email', _inputs.email.val(), SETTINGS.cookie);
+				}
+			}, 1000);
+		
+		}).blur(validateForm).keyup();
+		
+		// Отправка формы
+		_form.submit(function(event){
+			if( _form.data('enabled') ){
+				var method = _form.attr('method'),
+					action = _form.attr('action'),
+					serializedData = serializeData(_form.serializeArray());
+				
+				_form.data('enabled', false);
+				disableSubmit();
+				
+				$.ajax({
+					type: method,
+					url: action,
+					data: serializedData,
+					success: function(response){
+						if( _inputs.time.val() == '' || _inputs.time.val() == SETTINGS.hints.time ){
+							$(SETTINGS.timePartSelector, _message).text('ближайшее');
+						}
+						
+						_form.hide();
+						_message.show();
+						
+						_inputs.text.val('');
+						$.cookie('text', null, SETTINGS.cookie);
+						
+						setTimeout(modal.hide, 5000);
+					}
+				});
+			}
+			
+			event.preventDefault();
+		});
+		
+		// Кнопка Закрыть окно
+		$(SETTINGS.hideFromMessageSelector).click(function(event){
+			modal.hide();
+			event.preventDefault();
+		});
+	}
+	
+	function enableHints(){
+		$(SETTINGS.hintLabelSelector).hints();
+	}
+	
+	function validateForm(){
+		var emailRegexp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+		
+		if( _inputs.text.val() != '' && ((_inputs.phone.val() != '' && _inputs.phone.val() != SETTINGS.hints.phone) || emailRegexp.test(_inputs.email.val())) ){
+			enableSubmit();
+		}
+		else {
+			disableSubmit();
+		}
+	}
+	
+	function disableSubmit(){
+		_submit.addClass(SETTINGS.disabledButtonClass);
+		_submitButton.attr('disabled', 'disabled');
+	}
+	
+	function enableSubmit(){
+		_submit.removeClass(SETTINGS.disabledButtonClass);
+		_submitButton.removeAttr('disabled');
+	}
+	
+	function serializeData(data){
+		return $.map(data, function(element, index){
+			switch( element.name ){
+				case 'name':
+					if( element.value == SETTINGS.hints.name ){
+						element.value = '';
+					}
+					return element;
+					break;
+				case 'phone':
+					if( element.value == SETTINGS.hints.phone ){
+						element.value = '';
+					}
+					return element;
+					break;
+				case 'time':
+					if( element.value == SETTINGS.hints.time ){
+						element.value = '';
+					}
+					return element;
+					break;
+				case 'email':
+					if( element.value == SETTINGS.hints.email ){
+						element.value = '';
+					}
+					return element;
+					break;
+				default:
+					return element;
+					break;
+			}
+		});
+	}
+	
+	return {
+		init: function(userSettings){
+			$.extend(SETTINGS, userSettings);
+			
+			_form = $(SETTINGS.formSelector);
+			_submit = $(SETTINGS.submitSelector);
+			_submitButton = $('input', _submit);
+			_message = $(SETTINGS.messageSelector);
+			
+			_inputs = {
+				text: $(SETTINGS.inputSelectors.text),
+				name: $(SETTINGS.inputSelectors.name),
+				phone: $(SETTINGS.inputSelectors.phone),
+				time: $(SETTINGS.inputSelectors.time),
+				email: $(SETTINGS.inputSelectors.email)
+			};
+			
+			_timeouts = {
+				text: 0,
+				name: 0,
+				phone: 0,
+				time: 0,
+				email: 0
+			}
+			
+			_form.data('enabled', true);
+			
+			initForm();
+			assignEvents();
+			enableHints();
+		}
+	};
 })();

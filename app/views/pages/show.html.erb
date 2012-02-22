@@ -5,6 +5,29 @@
       $(function() {
         slideShow.init();
         $('ul.b-main-menu li#menu_<%= @page.slug %> a.link').addClass('selected');
+
+        var introGallery = $('.b-intro-gallery');
+        $('.all-images .link', introGallery).click(function(event){
+            $('.js-modal', introGallery).eq(0).click();
+            event.preventDefault();
+        });
+
+        $('#tabs').tabs({
+            linkSelector: '.b-tabs .link',
+            tabSelector: '.js-tab',
+            onSwitchTab: function(){
+                $.history.load( $(this).attr('href').substr(5) );
+            }
+        });
+
+        $.history.init(function(hash){
+            if( hash == '' ){
+                hash = 'testing-1';
+            }
+            hash = hash.replace('tab-', '');
+            $('#tabs a[href=#tab-' + hash + ']').trigger('clickOnly');
+        });
+
       });
     </script>
 <% end %>

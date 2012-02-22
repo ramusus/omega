@@ -28,6 +28,14 @@ UL {
 * HTML .l-modal {
 	position: absolute;
 	}
+	.l-modal-outer {
+		display: block;
+		width: auto;
+		height: auto;
+		}
+		.l-modal-container {
+			display: inline;
+			}
 
 /* Header and footer blocks */
 .b-contacts .b-icon-mail {
@@ -55,6 +63,9 @@ UL {
 		}
 * HTML .b-press .item {
 	display: inline;
+	}
+* HTML .b-modal-gallery {
+	float: left;
 	}
 
 /* Form elements */

@@ -260,10 +260,21 @@ SUB {
 	background: #212121;
 	color: #FFF;
 	}
-	.l-modal-inner {
-		width: 432px;
-		margin: 64px auto;
+	.l-modal-outer {
+		display: table;
+		width: 100%;
+		height: 100%;
 		}
+		.l-modal-inner {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			}
+			.l-modal-container {
+				display: inline-block;
+				padding: 32px;
+				text-align: left;
+				}
 
 /* Holsters */
 .h-column-20 {
@@ -716,27 +727,38 @@ SUB {
 					.b-gallery .image {
 						display: block;
 						}
-					.b-gallery .desc {
+					.b-gallery .overlay {
 						position: absolute;
-						bottom: 23px;
-						left: 31px;
-						width: 320px;
-						margin: 0;
+						left: 0;
+						bottom: 0;
+						width: 572px;
+						padding: 16px 22px 18px 22px;
+						
+						background: url('../img/containers/gallery-overlay.png') repeat-y;
+						background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, .58), rgba(0, 0, 0, .2));
+						background: -moz-linear-gradient(0deg, rgba(0, 0, 0, .58), rgba(0, 0, 0, .2));
+						background: -ms-linear-gradient(0deg, rgba(0, 0, 0, .58), rgba(0, 0, 0, .2));
+						background: -o-linear-gradient(0deg, rgba(0, 0, 0, .58), rgba(0, 0, 0, .2));
+						background: linear-gradient(0deg, rgba(0, 0, 0, .58), rgba(0, 0, 0, .2));
 						}
-					.b-gallery .link {
-						position: absolute;
-						right: 31px;
-						bottom: 20px;
-						padding: 2px 8px 4px 8px;
-						background: #F9BF0D;
-						font-size: 11px;
-						line-height: 16px;
-						color: #000;
-						outline-color: #FFF;
-						}
-					.b-gallery .link:hover {
-						background: #FFCB33;
-						}
+						.b-gallery .desc {
+							width: 320px;
+							margin: 0;
+							}
+						.b-gallery .link {
+							position: absolute;
+							right: 22px;
+							bottom: 16px;
+							padding: 2px 8px 4px 8px;
+							background: #F9BF0D;
+							font-size: 11px;
+							line-height: 16px;
+							color: #000;
+							outline-color: #FFF;
+							}
+						.b-gallery .link:hover {
+							background: #FFCB33;
+							}
 	.b-gallery .b-control-prev {
 		position: absolute;
 		top: 133px;
@@ -848,6 +870,9 @@ SUB {
 				.b-intro-gallery .images .link:hover .overlay {
 					display: block;
 					}
+	.b-intro-gallery .fake-link {
+		display: none;
+		}
 	.b-intro-gallery .all-images {
 		text-align: center;
 		font-size: 14px;
@@ -1047,6 +1072,41 @@ SUB {
 		padding-top: 1px;
 		}
 
+/* Modal gallery */
+.b-modal-gallery {
+	position: relative;
+	padding: 0 76px;
+	}
+	.b-modal-gallery .image {
+		display: block;
+		}
+	.b-modal-gallery .b-control {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -19px;
+		}
+	.b-modal-gallery .b-control-next {
+		left: auto;
+		right: 0;
+		}
+	.b-modal-gallery .link:hover .b-control-next B {
+		margin-left: -180px;
+		}
+	.b-modal-gallery .disabled {
+		cursor: default;
+		}
+		.b-modal-gallery .disabled .b-control-next B,
+		.b-modal-gallery .disabled:hover .b-control-next B {
+			margin-left: -225px;
+			}
+.b-modal-gallery-single .link {
+	cursor: default;
+	}
+	.b-modal-gallery-single .b-control {
+		display: none;
+		}
+
 /* =Containers
 --------------------------------------- */
 
@@ -1081,6 +1141,17 @@ SUB {
 		.b-less-text LI {
 			margin-bottom: 4px;
 			}
+
+/* Hidden content for modal */
+.b-modal-content {
+	display: none;
+	}
+
+/* Feedback container */
+.b-feedback {
+	width: 432px;
+	padding: 32px 0;
+	}
 
 /* =Form elements
 --------------------------------------- */
@@ -1229,7 +1300,6 @@ SUB {
 
 /* Simple form */
 .b-form {
-	margin-bottom: 63px;
 	padding: 18px 35px 26px 35px;
 	border: 1px solid #333;
 	}
