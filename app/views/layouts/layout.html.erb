@@ -2,22 +2,24 @@
     <div class="l-content">
         <div class="b-intro">
             <h1 class="b-logo">
-                <a class="link" href="/"><b class="logo"></b> Омега Консалтинг</a>
+                <a class="link" href="/"><b class="logo"></b> <% if @en %>Omega Consulting<% else %>Омега Консалтинг<% end %></a>
             </h1>
-            <ul class="b-main-menu">
-                <li id="menu_testing" class="item">
-                    <a class="link" href="/testing/">Тестирование</a>
-                </li>
-                <li id="menu_devices" class="item">
-                    <a class="link" href="/devices/">Устройства</a>
-                </li>
-                <li id="menu_education" class="item teach">
-                    <a class="link" href="/education/">Обучение</a>
-                </li>
-                <li id="menu_company" class="item">
-                    <a class="link" href="/company/">Компания</a>
-                </li>
-            </ul>
+            <% if not @en %>
+                <ul class="b-main-menu">
+                    <li id="menu_testing" class="item">
+                        <a class="link" href="/testing/">Тестирование</a>
+                    </li>
+                    <li id="menu_devices" class="item">
+                        <a class="link" href="/devices/">Устройства</a>
+                    </li>
+                    <li id="menu_education" class="item teach">
+                        <a class="link" href="/education/">Обучение</a>
+                    </li>
+                    <li id="menu_company" class="item">
+                        <a class="link" href="/company/">Компания</a>
+                    </li>
+                </ul>
+            <% end %>
             <%= yield :top %>
         </div>
         <%= content_for?(:body) ? yield(:body) : yield %>
