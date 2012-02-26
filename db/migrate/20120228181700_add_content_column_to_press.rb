@@ -1,4 +1,4 @@
-class AddTextColumnToPress < ActiveRecord::Migration
+class AddContentColumnToPress < ActiveRecord::Migration
   def self.up
     change_table :presses do |t|
       t.text :content
