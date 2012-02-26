@@ -105,12 +105,16 @@ RailsAdmin.config do |config|
       include_fields :title, :date
     end
     edit do
-      include_fields :title, :link, :date, :image
+      include_fields :title, :link, :date, :image, :content
       field :image, :paperclip do
         # set a method available to your asset (defaults to :thumb, :thumbnail or '100x100>' for Dragonfly)
         thumb_method :medium
         # for delete checkbox in forms
         delete_method :image_delete     # don't forget to whitelist if you use :attr_accessible
+      end
+      field :content do
+        ckeditor true
+        ckeditor_config_js '/javascripts/ckeditor/config.js'
       end
     end
   end

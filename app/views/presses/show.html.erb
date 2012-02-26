@@ -1,0 +1,9 @@
+<% content_for :title do %><%= @page.title %><% end %>
+
+<% content_for :body do %>
+    <h2><%= @page.title.html_safe %></h2>
+    <p><%= link_to 'Вернуться ко всем публикациям в прессе', presses_path() %></p>
+    <%= @page.content.html_safe %>
+<% end %>
+
+<%= render :template => 'layouts/layout' %>

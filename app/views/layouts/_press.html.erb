@@ -2,17 +2,25 @@
     <% @presses.each do |press| %>
         <li class="item">
             <span class="instead-link">
-                <% if press.link != '' %>
-                    <%= link_to image_tag(press.image.url), press.link %>
+                <% if press.content %>
+                    <%= link_to image_tag(press.image.url), press %>
                 <% else %>
-                    <%= image_tag press.image.url %>
+                    <% if press.link != '' %>
+                        <%= link_to image_tag(press.image.url), press.link %>
+                    <% else %>
+                        <%= image_tag press.image.url %>
+                    <% end %>
                 <% end %>
                 <div class="date"><%= l press.date, :format => "%e %B %Y"  %></div>
                 <h3 class="title">
-                    <% if press.link != '' %>
-                        <%= link_to press.title, press.link %>
+                    <% if press.content %>
+                        <%= link_to press.title, press %> (статья)
                     <% else %>
-                        <%= press.title %>
+                        <% if press.link != '' %>
+                            <%= link_to press.title, press.link %>
+                        <% else %>
+                            <%= press.title %>
+                        <% end %>
                     <% end %>
                 </h3>
             </span>

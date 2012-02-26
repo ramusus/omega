@@ -8,9 +8,8 @@ Project::Application.routes.draw do
 
   devise_for :users
 
-  #resources :presses
+  resources :presses, :path => "/press/"
   #resources :pages
-  match "/press/" => "presses#index"
   match "/:slug/" => "pages#show"
   root :to => "pages#show"
 

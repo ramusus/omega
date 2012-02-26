@@ -6,4 +6,11 @@ class PressesController < ApplicationController
       format.html # index.html.erb
     end
   end
+  def show
+    @page = Press.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+    end
+  end
 end

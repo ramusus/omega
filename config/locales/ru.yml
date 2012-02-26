@@ -23,6 +23,7 @@ ru:
         date: "Дата"
         link: "Ссылка"
         image: "Картинка"
+        content: "Статья"
       query:
         topic: "Тема"
         description: "Описание задачи и вопросы"

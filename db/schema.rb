@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120216183500) do
+ActiveRecord::Schema.define(:version => 20120226122821) do
 
   create_table "chunks", :force => true do |t|
     t.string   "title"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20120216183500) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.text     "content"
   end
 
   create_table "queries", :force => true do |t|
