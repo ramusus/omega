@@ -11,7 +11,8 @@
 * HTML .b-good,
 * HTML .b-good .desc,
 * HTML .b-inset,
-.b-field {
+.b-field,
+.b-server-error .back-link {
 	zoom: 1;
 	}
 

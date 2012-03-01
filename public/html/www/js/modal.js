@@ -18,7 +18,9 @@ var modal = (function () {
 				</div> \
 			</div>',
 		modalInnerSelector: '.l-modal-container',
-		hideLinkSelector: '.link',
+		hideContainerSelector: '.b-bookmark-hide',
+		hideContainerGalleryClass: 'b-bookmark-hide-gallery',
+		hideLinkSelector: '.b-bookmark-hide .link',
 		gallery: {
 			html:
 				'<div class="b-modal-gallery"> \
@@ -38,12 +40,13 @@ var modal = (function () {
 	};
 	
 	var _html, _body, _container, _inner,
-		_showLinks, _showLinksGroup, _currentLink, _hideLink,
+		_showLinks, _showLinksGroup, _currentLink, _hideContainer, _hideLink,
 		_gallery, _inlineContainer;
 	
 	function prepareHtml(){
 		_container = $(SETTINGS.modalHtml);
 		_inner = $(SETTINGS.modalInnerSelector, _container);
+		_hideContainer = $(SETTINGS.hideContainerSelector, _container);
 		_hideLink = $(SETTINGS.hideLinkSelector, _container);
 		
 		_body.append(_container);
@@ -98,6 +101,9 @@ var modal = (function () {
 			
 			_gallery.mainImage.attr('src', url);
 			_inner.append(_gallery.container);
+			
+			// Лучше реализовать возможность задания произвольного заголовка
+			_hideContainer.addClass(SETTINGS.hideContainerGalleryClass);
 		}
 		else if( urlType == '.html' || urlType == '.htm' ) {
 			_inner.load(url += '?random=' + (new Date().getTime()));
@@ -164,6 +170,8 @@ var modal = (function () {
 		}
 		
 		_inner.html('');
+		
+		_hideContainer.removeClass(SETTINGS.hideContainerGalleryClass);
 	}
 	
 	function showContainer(){

@@ -99,7 +99,9 @@ H2 {
 	color: #6C6C6C;
 	}
 H3 {
-	margin: 32px 0 15px 0;
+	margin: 45px 0 18px 0;
+	text-align: center;
+	font-size: 18px;
 	}
 P {
 	margin-bottom: 21px;
@@ -160,6 +162,10 @@ SUB {
 
 /* =Layout
 --------------------------------------- */
+.l-clear-page {
+	background-image: none;
+	color: #C9C9CB;
+	}
 .l-header {
 	position: relative;
 	padding: 11px 16px 11px 24px;
@@ -182,6 +188,11 @@ SUB {
 	padding: 36px 36px 36px 50px;
 	border-top: 1px solid #3C3C42;
 	color: #AAA;
+	}
+.l-container {
+	width: 850px;
+	margin: 0 auto;
+	padding: 172px 0 84px 0;
 	}
 
 /* Columns */
@@ -403,6 +414,12 @@ SUB {
 	.b-bookmark-hide .link:hover {
 		background-position: -99px 0;
 		}
+.b-bookmark-hide-gallery .link {
+	background-position: -132px 0;
+	}
+.b-bookmark-hide-gallery .link:hover {
+	background-position: -165px 0;
+	}
 
 /* Small logo */
 .b-small-logo {
@@ -530,6 +547,7 @@ SUB {
 .b-control-next B {
 	margin-left: -135px;
 	}
+.b-control-next-hover B,
 .b-control-next:hover B {
 	margin-left: -180px;
 	}
@@ -612,6 +630,20 @@ SUB {
 .b-first-title {
 	margin-top: 0;
 	}
+
+/* Reverse navigation */
+.b-back-link {
+	margin-bottom: 6px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 16px;
+	}
+	.b-back-link .link {
+		color: #003E9A;
+		}
+	.b-back-link .link:hover {
+		color: #36C;
+		}
 
 /* Section intro */
 .b-section-intro {
@@ -726,6 +758,10 @@ SUB {
 					}
 					.b-gallery .image {
 						display: block;
+						cursor: pointer;
+						}
+					.b-gallery .image-disabled {
+						cursor: default;
 						}
 					.b-gallery .overlay {
 						position: absolute;
@@ -785,6 +821,7 @@ SUB {
 	.b-press .item {
 		float: left;
 		width: 175px;
+		height: 154px;
 		margin: 42px 0 0 20px;
 		padding: 0;
 		background: none;
@@ -814,6 +851,7 @@ SUB {
 				}
 			.b-press .title {
 				margin: 0;
+				text-align: left;
 				text-decoration: underline;
 				font-size: 13px;
 				line-height: 15px;
@@ -1022,7 +1060,7 @@ SUB {
 		}
 		.b-good .title {
 			margin: 0 0 20px 0;
-			font-size: 18px;
+			text-align: left;
 			line-height: 20px;
 			}
 		.b-good .options {
@@ -1293,6 +1331,43 @@ SUB {
 		}
 	.b-message .link:hover {
 		color: #FFF;
+		}
+
+/* Server error */
+.b-server-error {
+	position: relative;
+	}
+	.b-server-error .title {
+		margin: 0 0 12px -2px;
+		text-align: left;
+		text-transform: none;
+		font: normal 54px/54px 'Coliseum Regular', Arial, Helvetica, sans-serif;
+		}
+	.b-server-error .sub-title {
+		margin: 0 0 64px 0;
+		text-align: left;
+		font: normal 36px/36px 'Coliseum Regular', Arial, Helvetica, sans-serif;
+		color: #C7C7C9;
+		}
+	.b-server-error .desc {
+		width: 500px;
+		margin-bottom: 36px;
+		}
+	.b-server-error .back-link {
+		margin-left: -8px;
+		padding: 3px 12px 5px 12px;
+		background: #F9BF0D;
+		font-size: 11px;
+		line-height: 16px;
+		color: #000;
+		outline-color: #FFF;
+		}
+	.b-server-error .back-link:hover {
+		background: #FFCB33;
+		}
+	.b-server-error .b-small-logo {
+		top: -42px;
+		right: 0;
 		}
 
 /* =Forms

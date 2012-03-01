@@ -1,22 +1,24 @@
 var slideShow = (function(){
 	var SETTINGS = {
 		container: '#gallery',
-		slidesContainerSelector: '.slides', 
-		slideSelector: '.slide',
+		slidesContainerSelector: '.slides',
+		slideImageSelector: '.slide .image',
 		prevLinkSelector: '.b-control-prev',
 		nextLinkSelector: '.b-control-next',
+		nextLinkHoverClass: 'b-control-next-hover',
 		prevLinkDisabledClass: 'b-control-disabled-prev',
 		nextLinkDisabledClass: 'b-control-disabled-next',
 		dotsContainerSelector: '.dots',
 		dotSelector: '.b-dot',
 		dotSample: '<a class="b-dot" href="?"><b></b></a>',
 		dotSelectedClass: 'b-dot-selected',
-		slideWidth: 612
+		slideWidth: 612,
+		rotationTimer: 6000
 	};
 	
-	var _container, _prevLink, _nextLink,
-		_dotsContainer, _dots,
-		_slidesCount, _currentSlide;
+	var _container, _slidesContainer, _slideImages,
+		_prevLink, _nextLink, _dotsContainer, _dots,
+		_slidesCount, _currentSlide, _rotationTimeout;
 	
 	function prepareDots(){
 		var dotsHtml = '';
@@ -77,8 +79,25 @@ var slideShow = (function(){
 			
 			event.preventDefault();
 		});
+		
+		_container.hover(function(){
+			stopRotation();
+		},
+		function(){
+			startRotation();
+		});
+		
+		_slideImages.click(function(){
+			_nextLink.click();
+		});
+		
+		_slideImages.hover(function(){
+			_nextLink.addClass(SETTINGS.nextLinkHoverClass)
+		},
+		function(){
+			_nextLink.removeClass(SETTINGS.nextLinkHoverClass)
+		});
 	}
-	
 	function switchSlide(){
 		_slidesContainer.animate({
 			marginLeft: _currentSlide * SETTINGS.slideWidth * -1
@@ -87,22 +106,42 @@ var slideShow = (function(){
 		manageLinks();
 	}
 	
+	function startRotation(){
+		_rotationTimeout = setInterval(rotate, SETTINGS.rotationTimer);
+	}
+	
+	function stopRotation(){
+		clearTimeout(_rotationTimeout);
+	}
+	
+	function rotate(){
+		if( _currentSlide < _slidesCount - 1 ){
+			_dots.eq(_currentSlide + 1).click();
+		}
+		else{
+			_dots.eq(0).click();
+		}
+	}
+	
 	return {
 		init: function(userSettings){
 			$.extend(SETTINGS, userSettings);
 			
 			_container = $(SETTINGS.container);
 			_slidesContainer = $(SETTINGS.slidesContainerSelector, _container);
+			_slideImages = $(SETTINGS.slideImageSelector, _container);
 			_prevLink = $(SETTINGS.prevLinkSelector, _container);
 			_nextLink = $(SETTINGS.nextLinkSelector, _container);
 			_dotsContainer = $(SETTINGS.dotsContainerSelector, _container);
 			
 			_currentSlide = 0;
-			_slidesCount = $(SETTINGS.slideSelector, _slidesContainer).length;
+			_slidesCount = _slideImages.length;
+			_rotationTimeout = 0;
 			
 			prepareDots();
 			manageLinks();
 			assignEvents();
+			startRotation();
 		}
 	};
 })();

@@ -165,7 +165,7 @@ var feedback = (function () {
 	function validateForm(){
 		var emailRegexp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 		
-		if( _inputs.text.val() != '' && ((_inputs.phone.val() != '' && _inputs.phone.val() != SETTINGS.hints.phone) || emailRegexp.test(_inputs.email.val())) ){
+		if( (_inputs.phone.val() != '' && _inputs.phone.val() != SETTINGS.hints.phone) || emailRegexp.test(_inputs.email.val()) ){
 			enableSubmit();
 		}
 		else {
@@ -186,25 +186,25 @@ var feedback = (function () {
 	function serializeData(data){
 		return $.map(data, function(element, index){
 			switch( element.name ){
-				case 'name':
+				case 'query[name]':
 					if( element.value == SETTINGS.hints.name ){
 						element.value = '';
 					}
 					return element;
 					break;
-				case 'phone':
+				case 'query[phone]':
 					if( element.value == SETTINGS.hints.phone ){
 						element.value = '';
 					}
 					return element;
 					break;
-				case 'time':
+				case 'query[time]':
 					if( element.value == SETTINGS.hints.time ){
 						element.value = '';
 					}
 					return element;
 					break;
-				case 'email':
+				case 'query[email]':
 					if( element.value == SETTINGS.hints.email ){
 						element.value = '';
 					}
