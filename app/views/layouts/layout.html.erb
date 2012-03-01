@@ -1,3 +1,19 @@
+<% content_for :extra_head do %>
+    <%= yield :extra_head %>
+    <script type="text/javascript">
+        $(function()  {
+            if(typeof(String.prototype.trim) === "undefined") {
+                Object.prototype.trim = function() {
+                    return String(this).replace(/^\s+|\s+$/g, '');
+                };
+            }
+            if($('.b-main-menu').next().length == 0 || $('.l-column-540').html().trim() == '' && $('.l-column-140').html().trim() == '' && $('.b-main-menu').next().is('div.l-wrapper')) {
+                $('.b-main-menu').addClass('b-last-textblock');
+            }
+        });
+    </script>
+<% end %>
+
 <% content_for :content do %>
     <div class="l-content">
         <div class="b-intro">
