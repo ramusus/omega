@@ -3,7 +3,6 @@ Project::Application.routes.draw do
   resources :queries
 
   mount Ckeditor::Engine => '/ckeditor'
-
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
